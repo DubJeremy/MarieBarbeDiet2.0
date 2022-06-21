@@ -12,6 +12,7 @@ const Home: NextPage = () => {
     return (
         <div>
             <Head>
+                <link rel="shortcut icon" href="images/favicon/favicon.png" />
                 <title>Marie Barbé Diet</title>
             </Head>
 

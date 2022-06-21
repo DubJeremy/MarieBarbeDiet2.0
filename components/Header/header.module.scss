@@ -1,8 +1,6 @@
 @import "styles/variables.scss";
 
 .header {
-    h1 {
-        color: $greentea;
-        font-family: "Lato";
-    }
+    // height: 100vh;
+    background-color: $greentea;
 }
