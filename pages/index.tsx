@@ -1,15 +1,27 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import HomeComponent from "../components/Home";
+import Header from "../components/Header";
+import Summary from "../components/Summary";
+import Presentation from "../components/Presentation";
+import Target from "../components/Target";
+import Program from "../components/Program";
+import Faq from "../components/Faq";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
     return (
         <div>
             <Head>
-                <title>MarieBarbéDiet</title>
+                <title>Marie Barbé Diet</title>
             </Head>
-            <HomeComponent />
+
+            <Header />
+            <Summary />
+            <Presentation />
+            <Target />
+            <Program />
+            <Faq />
+            <Footer />
         </div>
     );
 };
