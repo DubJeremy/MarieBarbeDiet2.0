@@ -1,1 +1,8 @@
 @import "styles/variables.scss";
+
+.header {
+    h1 {
+        color: $greentea;
+        font-family: "Lato";
+    }
+}

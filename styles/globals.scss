@@ -30,3 +30,29 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+// Fonts -----------------------
+@font-face {
+  font-family: "PlayD";
+  src: url(./fonts/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: "PlayD-M";
+  src: url(./fonts/PlayfairDisplay-Medium.ttf);
+}
+@font-face {
+  font-family: "PlayD-B";
+  src: url(./fonts/PlayfairDisplay-Bold.ttf);
+}
+@font-face {
+  font-family: "Lato";
+  src: url(./fonts/Lato-Light.ttf);
+}
+@font-face {
+  font-family: "Lato-M";
+  src: url(./fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "Lato-B";
+  src: url(./fonts/Lato-Bold.ttf);
+}
