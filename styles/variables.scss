@@ -13,3 +13,11 @@ $purple: #9C7A97;
     flex-direction: $dir;
     flex-wrap: $wrap;    
 }
+
+// Media queries breakpoints ----
+$extra-small: 320px;
+$small: 500px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1280px;
+$ultra-wide: 1800px;
