@@ -4,6 +4,14 @@ $flashygreen: #629677;
 $orange: #EF8354;
 $purple: #9C7A97;
 
+$background: #EAEBED;
+$darkbackground: #b3b3b5;
+$yellow: #FFD782;
+$green: #46A8A7;
+$blue: #334F64;
+
+
+
 // Mixin -----------------------
 @mixin flex ($just: center, $align: center, $dir:column, $wrap: wrap)  
 {

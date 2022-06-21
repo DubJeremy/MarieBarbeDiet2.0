@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import styles from './program.module.scss'
+import BackgroundVege from "../svgs/vegetables.svg";
+
+import styles from "./program.module.scss";
 
 function Program() {
     return (
-        <div>
-            5
+        <div className={styles.program}>
+            <div className={styles.backgroundVege}>
+                <BackgroundVege />
+            </div>
         </div>
     );
 }
