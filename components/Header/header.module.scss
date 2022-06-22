@@ -1,8 +1,6 @@
 @import "styles/variables.scss";
 
 .header {
-    overflow-x: unset;
-    
     .logoTitle {
         @include flex;
         width: 100%;
@@ -26,7 +24,7 @@
         
         .photoMB {
             border: 1px solid black;
-            width: 35vw;
+            min-width: 35vw;
             max-width: 50%;
             padding: 20px;
             background-color: $background;
