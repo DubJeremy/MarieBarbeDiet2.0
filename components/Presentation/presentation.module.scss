@@ -1,1 +1,43 @@
 @import "styles/variables.scss";
+
+.presentation {
+    @include flex($just: space-between, $dir: row);
+    // height: 90vh;
+    border-bottom: 1px solid black;
+    
+    .background {
+        @include flex;
+        flex: 2;
+        padding: 65px 15%;
+        // max-height: 90vh;
+        
+        h2 {
+            font-family: "PlayD-B";
+            font-size: 3em;
+            margin-bottom: 25px;
+            color: $blue;
+        }
+        p {
+            font-family: "Lato";
+            font-size: 1.5em;
+            line-height: 1.1em;
+            text-align: center;
+            &:last-child {
+                font-family: "PlayD";
+                font-size: 1.8em;
+                margin-top: 10px;
+                color: $blue;
+            }
+        }
+    }
+    .illustration {
+        flex: 1;
+        height: 90vh;
+        position: relative;
+        bottom: 0;
+        // border-top: 1px solid black;
+        // border-left: 1px solid black;
+        background: url(../svgs/healthyplate.svg);
+        background-size: cover;
+    }
+}
