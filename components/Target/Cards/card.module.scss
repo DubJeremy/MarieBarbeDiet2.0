@@ -9,9 +9,9 @@
     border-radius: 40%;
     @include flex;
     padding: 25px;
-    border: 1px solid $blue;
+    box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.35);
+    // border: 1px solid $blue;
     
-
     h3 {
         font-family: "PlayD-B";
         font-size: 2em;
@@ -19,7 +19,7 @@
     }
     p {
         font-family: "Lato";
-        font-size: 1.5em;
+        font-size: 1em;
         line-height: 1.1em;
         margin: 10px 0 25px 0;
     }
