@@ -3,7 +3,6 @@
 .presentation {
     @include flex($just: space-between, $dir: row);
     // height: 90vh;
-    border-bottom: 1px solid black;
     
     .background {
         @include flex;
