@@ -3,7 +3,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Summary from "../components/Summary";
 import Presentation from "../components/Presentation";
-import Target from "../components/Target";
+import Services from "../components/Services";
 import Program from "../components/Program";
 import Faq from "../components/Faq";
 import Footer from "../components/Footer";
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
             <Header />
             <Summary />
             <Presentation />
-            <Target />
+            <Services />
             <Program />
             <Faq />
             <Footer />
