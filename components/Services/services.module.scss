@@ -2,6 +2,7 @@
 
 .services {
     @include flex;
+    overflow: hidden;
     h2 {
         font-family: "Lato-M";
         margin: 5vh 0;
