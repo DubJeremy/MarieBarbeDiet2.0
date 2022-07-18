@@ -13,6 +13,11 @@ const Home: NextPage = () => {
         <div>
             <Head>
                 <link rel="shortcut icon" href="favicon.ico" />
+                <meta
+                    name="description"
+                    content="Diététicienne, Atteignez vos objectifs avec un petit coup de pouce, Restez motivés.
+                    Perte de poids, Réequilibrage alimentaire, Coaching minceur, grossesse, sportifs, adolescents, adultes."
+                />
                 <title>Marie Barbé Diet</title>
             </Head>
 
