@@ -2,48 +2,108 @@
 
 .program {
     position: relative;
-    min-height: 50vh;
-    @include flex;
-    // overflow: hidden;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 10vh 10vh 1fr 10vh 1fr;
 
-    .svgBackground {
-        width: 120%;
-        position: absolute;
-        left: -9%;
-        top: -350px;
-        z-index: -1;
-    }
     h2 {
+        @include flex;
         font-family: "PlayD-B";
-        font-size: 3em;
-        margin-bottom: 25px;
-        color: $background;
-        text-shadow: 3px 3px 0px $blue;
+        font-size: 1.5em;
+        color: $blue;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .first {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        > .containerLeft {
+            background: url(../../public/images/coffeSnack.png);
+            background-size: cover;         
+            padding: 10%;
+        }
+    }
+    .next {
+        grid-column: 2/3;
+        grid-row: 5/6;
+        > .containerRight {
+            background: url(../../public/images/fruits.jpg);
+            background-size: cover;
+            padding: 10%;
+        }
     }
     .appointment {
-        background-color: $background;
-        @include flex;
-        opacity: 0.8;
-        margin-bottom: 50px;
-        padding: 30px;
-        // border-radius: 10px;
+        display: grid;
+        grid-template-columns: 45% 10% 45%;
+        grid-template-rows: 100%;
+        height: 90vh;
+        position: relative;
+
+        .containerRight {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            background-color: transparent;
+            > h3 {
+                right: 0;
+            }
+            > .glassEffect {
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+        }
+        .containerLeft {
+            grid-column: 3/4;
+            grid-row: 1/2;
+            
+            > h3 {
+                left: 0;
+            }
+            > .glassEffect {
+                grid-column: 3/4;
+                grid-row: 1/2;
+            }
+        }
+        .glassEffect {
+            width: 90%;
+            height: 95%;
+            background-color: $background ;
+            opacity: 0.8;
+            position: absolute;
+            z-index: 0;
+            top: 2.5%;
+            left: 5%;
+        }
+        .center {
+            height: 100%;
+            width: 100%;
+            @include flex;
+            position: relative;
+            z-index: 1;
+        }
     }
     h3 {
         font-family: "PlayD-B";
-        font-size: 1.5em;
-        margin-bottom: 25px;
+        font-size: 3em;
         color: $blue;
+        position: sticky;
+        top: 0;
     }
     h4 {
-        font-family: "PlayD-M";
+        position: relative;
+        z-index: 1;
+        font-family: "PlayD-B";
         font-size: 1.2em;
-        margin-bottom: 25px;
         color: $blue;
+        text-align: center;
+        padding-top: 5px;
     }
+    
     p {
-        font-family: "Lato";
-        font-size: 1.2em;
+        font-family: "Lato-M";
+        font-size: 1.6em;
         line-height: 1.1em;
         text-align: center;
+        padding: 15px 20px;
     }
 }
