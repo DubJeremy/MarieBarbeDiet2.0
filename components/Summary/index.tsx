@@ -15,7 +15,7 @@ function Summary() {
                 <Link href="#appointment" >
                     <a>Détail des consultations</a>
                 </Link>
-                <Link href="#usercategories" scroll>
+                <Link href="#target" scroll>
                     <a>Pour qui?</a>
                 </Link>
                 <Link href="#faq">
