@@ -1,1 +1,37 @@
 @import "styles/variables.scss";
+
+.footer {
+    @include flex;
+    .network{
+        width: 50%;
+        @include flex($just: space-between, $dir: row);
+        .facebook {
+            width: 15px;
+        }
+        .instagram {
+            
+            width: 20px;
+        }
+        .linkedin {
+            
+            width: 20px;
+        }
+    }
+    >div:last-child {
+        width: 100%;
+        @include flex($just: space-between, $dir: row);
+        >div:first-child {
+
+        }
+        >div:last-child {
+            @include flex($dir: row);
+            p {
+
+            }
+            .dubLinkedIn {
+                width: 25px;
+                margin-left: 5px;
+            }
+        }
+    }
+}

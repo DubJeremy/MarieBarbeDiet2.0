@@ -1,1 +1,49 @@
 @import "styles/variables.scss";
+
+.program {
+    position: relative;
+    min-height: 50vh;
+    @include flex;
+    // overflow: hidden;
+
+    .svgBackground {
+        width: 120%;
+        position: absolute;
+        left: -9%;
+        top: -350px;
+        z-index: -1;
+    }
+    h2 {
+        font-family: "PlayD-B";
+        font-size: 3em;
+        margin-bottom: 25px;
+        color: $background;
+        text-shadow: 3px 3px 0px $blue;
+    }
+    .appointment {
+        background-color: $background;
+        @include flex;
+        opacity: 0.8;
+        margin-bottom: 50px;
+        padding: 30px;
+        // border-radius: 10px;
+    }
+    h3 {
+        font-family: "PlayD-B";
+        font-size: 1.5em;
+        margin-bottom: 25px;
+        color: $blue;
+    }
+    h4 {
+        font-family: "PlayD-M";
+        font-size: 1.2em;
+        margin-bottom: 25px;
+        color: $blue;
+    }
+    p {
+        font-family: "Lato";
+        font-size: 1.2em;
+        line-height: 1.1em;
+        text-align: center;
+    }
+}
