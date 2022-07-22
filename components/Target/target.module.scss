@@ -1,1 +1,10 @@
 @import "styles/variables.scss";
+
+.target {
+    @include flex($just:space-between, $dir: row);
+    padding: calc(35px + 5vh) 10vw 0 10vw ;
+
+    .cards {
+        
+    }
+}

@@ -1,5 +1,6 @@
+@import "./variables.scss";
 // Reset ------------------------------
-html, body {
+* {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -14,6 +15,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    background-color: $background;
 }
 ol, ul {
 	list-style: none;
