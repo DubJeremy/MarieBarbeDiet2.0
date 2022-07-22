@@ -1,6 +1,3 @@
-import { useEffect, useRef } from "react";
-import { getDocHeight } from "../../styles/utils/docSize.utils";
-
 import LogoMBD from "../svgs/MarieBarbé.svg";
 import PhotoMB from "../svgs/fdp.svg";
 import BackgroundVege from "../svgs/vegetables.svg";
@@ -8,14 +5,6 @@ import BackgroundVege from "../svgs/vegetables.svg";
 import styles from "./header.module.scss";
 
 function Header() {
-    // const appRef = useRef<HTMLDivElement | null>(null);
-
-    // useEffect(() => {
-    //     if (appRef.current) {
-    //         appRef.current.style.height = getDocHeight();
-    //     }
-    // }, []);
-
     return (
         <div  className={styles.header}>
             <div className={styles.logoTitle}>

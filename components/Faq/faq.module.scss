@@ -1,1 +1,179 @@
 @import "styles/variables.scss";
+
+.faq {
+    width: 100%;
+    margin-top: 5vh;
+    overflow: hidden;
+
+    > h2 {
+        font-family: "PlayD-B";
+        font-size: 15em;
+        color: $brown;
+        max-height: 240px;
+        width: 215vw;
+        text-shadow: 2px 2px 2px $blue;
+    }
+    > div:nth-child(2) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 10vh;
+
+        .questions {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            background-color: $cream;
+            @include flex($align: flex-start);
+            padding: 5vh 0;
+
+            h3 {
+                font-family: "PlayD-B";
+                font-size: 2.3em;
+                line-height: 1.1em;
+                padding: 2vh 5vh;
+                &:hover {
+                    color: $brown;
+                    cursor: pointer;
+                }
+            }
+        }
+        .answer {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            background: $brown;
+            position: relative;
+            @include flex;
+
+            h2 {
+                text-align: center;
+                width: 100px;
+                font-family: "Amatic";
+                font-size: 4em;
+                line-height: 0.8em;
+                position: absolute;
+                top: -25px;
+                right: 100px;
+                color: $brown;
+            }
+            > .flower {
+                position: absolute;
+                top: -100px;
+                right: 50px;
+                padding: 0;
+                animation: 40s linear infinite rotation;
+
+                svg {
+                    width: 200px;
+                }
+            }
+            > div {
+                padding: 10vh;
+                p {
+                    font-family: "Lato";
+                    font-size: 2.3em;
+                    line-height: 1.2em;
+                    color: $cream;
+                    text-align: right;
+                }
+            }
+        }
+    }
+    // > p {
+    //     grid-row: 2/3;
+    //     @include flex($dir: row);
+    //     font-family: "Lato-M";
+    //     font-size: 2em;
+    //     a {
+    //     }
+    //     span {
+    //     }
+    // }
+    
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes firstShadowIn {
+    from {
+        margin-left: 0;
+        top: 0;
+        height: 120px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    to {
+        height: 60px;
+        top: -30px;
+        margin-left: 40px;
+        border-radius: 0px 0px 0px 0px;
+    }
+}
+@keyframes firstShadowOut {
+    from {
+        height: 60px;
+        top: -30px;
+        margin-left: 40px;
+        border-radius: 0px 0px 0px 0px;
+    }
+    to {
+        margin-left: 0;
+        top: 0;
+        height: 120px;
+        border-radius: 10px 10px 0px 0px;
+    }
+}
+@keyframes secondShadowIn {
+    from {
+        margin-right: 0;
+        top: 120px;
+        height: 120px;
+        border-radius: 0px 0px 10px 10px;
+    }
+    to {
+        height: 60px;
+        top: 30px;
+        margin-right: 40px;
+        border-radius: 0px 0px 0px 0px;
+    }
+}
+@keyframes secondShadowOut {
+    from {
+        height: 60px;
+        top: 30px;
+        margin-right: 40px;
+        border-radius: 0px 0px 0px 0px;
+    }
+    to {
+        margin-right: 0;
+        top: 120px;
+        height: 120px;
+        border-radius: 0px 0px 10px 10px;
+    }
+}
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes scaleOut {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+@keyframes scaleHover {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}

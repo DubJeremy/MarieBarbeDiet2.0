@@ -9,7 +9,7 @@ function Summary() {
     return (
         <div className={styles.summary}>
             <div className={styles.backgroundVege}>
-                <BackgroundVege />
+                {/* <BackgroundVege /> */}
             </div>
             <div className={styles.summaryList}>
                 <Link href="#appointment" >
