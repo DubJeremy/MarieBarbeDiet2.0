@@ -1,0 +1,66 @@
+@import "styles/variables.scss";
+
+.services {
+    @include flex;
+    overflow: hidden;
+    h2 {
+        font-family: "Lato-M";
+        margin: 5vh 0;
+        font-size: 1.2em;
+    }
+    > div {
+        position: relative;
+        width: 100%;
+        min-height: 50vh;
+        @include flex;
+        h3 {
+            width: 60vw;
+            font-family: "PlayD-M";
+            font-size: 4em;
+            margin-bottom: 15px;
+            color: $darkbackground;
+            text-align: center;
+            line-height: 0.95em;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .serviceSelected {
+            color: $blue;      
+        }
+        p {
+            font-family: "Lato";
+            font-size: 1.8em;
+            width: 17vw;
+            height: 100%;
+            text-align: center;
+            @include flex;
+            position: absolute;
+            top:0;
+        }
+        .illustration {
+            position: absolute;
+            @include flex;
+            width: 17vw;
+            height: 100%;
+            top: 0;
+            svg {
+                border-radius: 10px;
+            }
+        }
+        .left {
+            left: 3.5vw;
+        }
+        .right {
+            right: 3.5vw;
+        }
+        .illuVertical {
+            position: absolute;
+            width: 19vw;
+            top: 6vh;
+            svg {
+                border-radius: 10px;
+            }
+        }
+    }
+}
