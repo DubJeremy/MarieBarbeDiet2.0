@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 import Flower from "../svgs/flower.svg";
 import { initialQuestion as questions } from "./FaqContent";
 
@@ -11,8 +10,8 @@ function Faq() {
     const [isToggled, setToggle] = useState(false);
 
     const openOptions = () => {
-    setToggle(!isToggled);
-  };
+        setToggle(!isToggled);
+    };
 
     return (
         <div className={styles.faq}>
@@ -42,18 +41,16 @@ function Faq() {
                         <p>
                             {selectedQuestion ? selectedQuestion.answerF : ""}
                         </p>
-                        <p>
+                        {/* <p>
                             {selectedQuestion && selectedQuestion.answerS
                                 ? selectedQuestion.answerS
                                 : ""}
-                        </p>
+                        </p> */}
                     </div>
                 </div>
             </div>
-            
-            <div>
-                
-            </div>
+
+            <div></div>
 
             {/* <p>
                 Pour toute autre questions prenez contact via le formulaire de
