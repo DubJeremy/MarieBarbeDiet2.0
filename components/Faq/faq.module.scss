@@ -39,7 +39,12 @@
         .answer {
             grid-column: 2/3;
             grid-row: 1/2;
-            background: $brown;
+            background: url(../../public/images/woodBackground.jpg);
+            background-attachment: fixed; 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            // background: $brown;
             position: relative;
             @include flex;
 
@@ -65,14 +70,15 @@
                     width: 200px;
                 }
             }
-            > div {
-                padding: 10vh;
+            .answerTxt {
+                background-color: $cream;
+                width: 75%;
                 p {
-                    font-family: "Lato";
-                    font-size: 2.3em;
+                    font-family: "Lato-M";
+                    font-size: 1.6em;
                     line-height: 1.2em;
-                    color: $cream;
-                    text-align: right;
+                    text-align: center;
+                    padding: 25px;
                 }
             }
         }

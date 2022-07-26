@@ -37,7 +37,7 @@ function Faq() {
                         <Flower />
                     </div>
                     <h2>FAQ</h2>
-                    <div>
+                    <div className={styles.answerTxt}>
                         <p>
                             {selectedQuestion ? selectedQuestion.answerF : ""}
                         </p>
