@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
+import { AnswerAnim, Container, TxtAnim } from "./motionFaq";
 import Flower from "../svgs/flower.svg";
 import { initialQuestion as questions } from "./FaqContent";
 
@@ -23,8 +25,8 @@ function Faq() {
                             key={question.question}
                             className={
                                 question === selectedQuestion
-                                    ? styles.nameTeamquestionLargeScreenSelected
-                                    : styles.nameTeamquestionLargeScreen
+                                    ? styles.questionSelected
+                                    : styles.questionNotSelected
                             }
                             onClick={() => setSelectedQuestion(question)}
                         >
@@ -32,22 +34,32 @@ function Faq() {
                         </h3>
                     ))}
                 </div>
-                <div className={styles.answer}>
-                    <div className={styles.flower}>
-                        <Flower />
-                    </div>
-                    <h2>FAQ</h2>
-                    <div className={styles.answerTxt}>
-                        <p>
-                            {selectedQuestion ? selectedQuestion.answerF : ""}
-                        </p>
-                        {/* <p>
-                            {selectedQuestion && selectedQuestion.answerS
-                                ? selectedQuestion.answerS
-                                : ""}
-                        </p> */}
-                    </div>
-                </div>
+                <AnimatePresence exitBeforeEnter>
+                    <motion.div
+                        key={selectedQuestion ? selectedQuestion.question : ""}
+                        className={styles.answer}
+                        variants={Container}
+                        initial="init"
+                        animate="start"
+                        exit="end"
+                    >
+                        <div className={styles.flower}>
+                            <Flower />
+                        </div>
+                        <h2>FAQ</h2>
+                        <motion.div
+                            className={styles.answerTxt}
+                            variants={AnswerAnim}
+                        >
+                            <motion.p
+                                variants={TxtAnim}>
+                                {selectedQuestion
+                                    ? selectedQuestion.answerF
+                                    : ""}
+                            </motion.p>
+                        </motion.div>
+                    </motion.div>
+                </AnimatePresence>
             </div>
 
             <div></div>

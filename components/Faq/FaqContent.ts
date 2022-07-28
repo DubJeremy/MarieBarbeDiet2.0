@@ -2,7 +2,6 @@ export const FaqContent: Faq.QuestionAnswer[] = [
     {
         question: "Quelle est la différence entre diététicienne et nutritionniste ?",
         answerF: "Un/une diététicien(ne) est un professionnel reconnue et diplômé d’un BTS ou DUT. Ce diplôme d’État est enregistré auprès de l’Agence Régionale de Santé et possède un numéro ADELI. ce qui garanti des qualifications, une formation qui a été encadrée et un statut légal. Les consultations sont remboursées par les mutuelles.",
-        answerS: "Un/une nutritionniste n'est pas forcément un professionnel de santé, il ou elle n'a pas de statut légal, pas de formation reconnue et définie. Il y a donc une possibilité de commerce illégal. Assurez-vous que votre nutritionniste soit un diététicien ou un médecin !"
     },
     {
         question: "Les consultations sont remboursées par l’assurance maladie ?",
