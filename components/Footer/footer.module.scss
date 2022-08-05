@@ -1,20 +1,29 @@
 @import "styles/variables.scss";
 
 .footer {
-    @include flex;
+    @include flex($just: space-between);
+    height: 15vh;
+    background-color: $darkbackground;
+    padding: 25px;
+    font-family: "Lato-M";
+    font-size: 1.2em;
+    color: $background;
     .network{
-        width: 50%;
+        width: 25%;
         @include flex($just: space-between, $dir: row);
         .facebook {
-            width: 15px;
+            width: 25px;
+            cursor: pointer;
         }
         .instagram {
-            
-            width: 20px;
+            padding-top: 5px ;
+            width: 40px;
+            cursor: pointer;
         }
         .linkedin {
             
-            width: 20px;
+            width: 40px;
+            cursor: pointer;
         }
     }
     >div:last-child {
@@ -31,6 +40,7 @@
             .dubLinkedIn {
                 width: 25px;
                 margin-left: 5px;
+                cursor: pointer;
             }
         }
     }

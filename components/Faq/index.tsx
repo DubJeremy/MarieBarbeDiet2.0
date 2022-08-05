@@ -64,7 +64,7 @@ function Faq() {
 
             <div></div>
 
-            {/* <p>
+            <p>
                 Pour toute autre questions prenez contact via le formulaire de
                 contact,{" "}
                 <a
@@ -75,7 +75,7 @@ function Faq() {
                 </a>{" "}
                 ou téléphone:{" "}
                 <span className={styles.mobilePhone}> 07.49.64.54.52</span>
-            </p> */}
+            </p>
         </div>
     );
 }
