@@ -1,0 +1,76 @@
+@import "styles/variables.scss";
+
+.contact {
+    padding-bottom: 15vh;
+    @include flex;
+    position: relative;
+
+    .card {
+        border: 1px solid black;
+        @include flex;
+        position: relative;
+        width: 70%;
+        padding: 20px;
+        background-color: rgb(205, 186, 205);
+        color: $blue;
+        .border {
+            position: absolute;
+            z-index: -1;
+            top: -20px;
+            left: 5%;
+            @include flex;
+            width: 90%;
+            height: calc(100% + 40px);
+            border: 1px solid black;
+        }
+        h3 {
+            font-family: "PlayD-M";
+            font-size: 4em;
+            padding-bottom: 40px;
+        }
+        .lightReflection {
+            width: 10%;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: transparent;
+        }
+        .contactLink {
+            width: 100%;
+            font-family: "Lato-B";
+            font-size: 1.5em;
+            @include flex;
+
+            .mobilePhone {
+                @include flex($dir: row);
+                margin-bottom: 20px;
+                .txt {
+                    font-size: 1.5em;
+                }
+            }
+            .mail {
+                @include flex($dir: row);
+                margin-bottom: 20px;
+                a {
+                    text-decoration: none;
+                    color: $blue;
+                }
+            }
+            .icon {
+                font-size: 3em;
+            }
+            .txt {
+                font-size: 1.5em;
+                padding-left: 30px;
+            }
+        }
+    }
+    .borderFooter {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: -3px;
+        padding: 0;
+        background-color: transparent;
+    }
+}

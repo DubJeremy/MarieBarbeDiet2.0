@@ -1,12 +1,14 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Header from "../components/Header";
-import Summary from "../components/Summary";
-import Presentation from "../components/Presentation";
-import Services from "../components/Services";
-import Program from "../components/Program";
+
+import Contact from "../components/Contact";
 import Faq from "../components/Faq";
 import Footer from "../components/Footer";
+import Head from "next/head";
+import Header from "../components/Header";
+import Presentation from "../components/Presentation";
+import Program from "../components/Program";
+import Summary from "../components/Summary";
+import Services from "../components/Services";
 
 const Home: NextPage = () => {
     return (
@@ -27,6 +29,7 @@ const Home: NextPage = () => {
             <Services />
             <Program />
             <Faq />
+            <Contact />
             <Footer />
         </div>
     );

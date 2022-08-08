@@ -51,8 +51,7 @@ function Faq() {
                             className={styles.answerTxt}
                             variants={AnswerAnim}
                         >
-                            <motion.p
-                                variants={TxtAnim}>
+                            <motion.p variants={TxtAnim}>
                                 {selectedQuestion
                                     ? selectedQuestion.answerF
                                     : ""}
@@ -61,21 +60,6 @@ function Faq() {
                     </motion.div>
                 </AnimatePresence>
             </div>
-
-            <div></div>
-
-            <p>
-                Pour toute autre questions prenez contact via le formulaire de
-                contact,{" "}
-                <a
-                    href="mailto:dieteticienne.marie@gmail.com"
-                    className={styles.contact}
-                >
-                    mail
-                </a>{" "}
-                ou téléphone:{" "}
-                <span className={styles.mobilePhone}> 07.49.64.54.52</span>
-            </p>
         </div>
     );
 }

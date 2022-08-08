@@ -22,18 +22,17 @@ function Footer() {
                     <Linkedin />
                 </div>
             </div>
-            <div>
+            <div className={styles.txt}>
                 <div>
                     <h3>Marie Barbé Diététicienne Nutritionniste Bordeaux</h3>
                     <p>© Copyright 2021 - Tous droits réservés</p>
                 </div>
                 <div>
                     <p>Website by Dubois Jérémy</p>
-                    <Link
-                        href="https://www.linkedin.com/in/jeremy-dubois-dev/"
-                        
-                    >
-                        <div className={styles.dubLinkedIn}><DubJeremyLogo /></div>
+                    <Link href="https://www.linkedin.com/in/jeremy-dubois-dev/">
+                        <div className={styles.dubLinkedIn}>
+                            <DubJeremyLogo />
+                        </div>
                     </Link>
                 </div>
             </div>

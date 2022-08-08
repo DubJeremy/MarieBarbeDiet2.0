@@ -2,35 +2,37 @@
 
 .footer {
     @include flex($just: space-between);
-    height: 15vh;
+    height: 22vh;
     background-color: $darkbackground;
-    padding: 25px;
+    padding: 35px;
     font-family: "Lato-M";
     font-size: 1.2em;
     color: $background;
+    position: relative;
     .network{
-        width: 25%;
+        padding-top: 40px;
+        width: 35%;
         @include flex($just: space-between, $dir: row);
         .facebook {
-            width: 25px;
+            width: 30px;
             cursor: pointer;
         }
         .instagram {
             padding-top: 5px ;
-            width: 40px;
+            width: 55px;
             cursor: pointer;
         }
         .linkedin {
             
-            width: 40px;
+            width: 55px;
             cursor: pointer;
         }
     }
-    >div:last-child {
+    .txt {
         width: 100%;
-        @include flex($just: space-between, $dir: row);
+        @include flex($align: flex-end,$just: space-between, $dir: row);
         >div:first-child {
-
+            width: 45%;
         }
         >div:last-child {
             @include flex($dir: row);
