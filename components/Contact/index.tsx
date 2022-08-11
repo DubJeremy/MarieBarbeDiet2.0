@@ -7,17 +7,17 @@ import styles from "./contact.module.scss";
 
 function Contact() {
     return (
-        <div className={styles.contact}>
+        <div id="contact" className={styles.contact}>
+                <h2>CONTACT</h2>
             <div className={styles.card}>
             <div className={styles.border}> </div>
-                <h3>Contact</h3>
                 <div className={styles.lightReflection}>
                     <LightReflection />
                 </div>
                 <div className={styles.contactLink}>
                     <div className={styles.mobilePhone}>
                         <div className={styles.icon}>☎</div>
-                        <div className={styles.txt}>07.49.64.54.52</div>{" "}
+                        <div className={styles.txt}>07 49 64 54 52</div>
                     </div>
                     <div className={styles.mail}>
                         <div className={styles.icon}>@</div>

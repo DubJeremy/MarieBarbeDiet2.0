@@ -1,65 +1,95 @@
 @import "./variables.scss";
 // Reset ------------------------------
 * {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    scroll-behavior: smooth;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
 body {
-	line-height: 1;
-    background-color: $background;
+    line-height: 1;
+    background: url(../public/images/VBackground.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-// Fonts -----------------------
-@font-face {
-  font-family: "PlayD";
-  src: url(./fonts/PlayfairDisplay-Regular.ttf);
-}
-@font-face {
-  font-family: "PlayD-M";
-  src: url(./fonts/PlayfairDisplay-Medium.ttf);
-}
-@font-face {
-  font-family: "PlayD-B";
-  src: url(./fonts/PlayfairDisplay-Bold.ttf);
-}
-@font-face {
-  font-family: "Lato";
-  src: url(./fonts/Lato-Light.ttf);
-}
-@font-face {
-  font-family: "Lato-M";
-  src: url(./fonts/Lato-Regular.ttf);
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  @media screen and (orientation: landscape) {
+    body {
+      background: url(../public/images/HBackground.png);
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  
+  // Fonts -----------------------
+  @font-face {
+    font-family: "PlayD";
+    src: url(./fonts/PlayfairDisplay-Regular.ttf);
+  }
+  @font-face {
+    font-family: "PlayD-M";
+    src: url(./fonts/PlayfairDisplay-Medium.ttf);
 }
 @font-face {
-  font-family: "Lato-B";
-  src: url(./fonts/Lato-Bold.ttf);
+    font-family: "PlayD-B";
+    src: url(./fonts/PlayfairDisplay-Bold.ttf);
 }
 @font-face {
-  font-family: "Amatic";
-  src: url(./fonts/AmaticSCRegular.ttf);
+    font-family: "Ranade";
+    src: url(./fonts/Ranade-Thin.ttf);
+}
+@font-face {
+    font-family: "Ranade-M";
+    src: url(./fonts/Ranade-Regular.ttf);
+}
+@font-face {
+    font-family: "Ranade-B";
+    src: url(./fonts/Ranade-Medium.ttf);
+}
+@font-face {
+    font-family: "Amatic";
+    src: url(./fonts/AmaticSCRegular.ttf);
+}
+@font-face {
+    font-family: "Faviotte";
+    src: url(./fonts/Flaviotte.ttf);
 }

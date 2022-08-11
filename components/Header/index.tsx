@@ -1,12 +1,12 @@
+import BackgroundVege from "../svgs/vegetables.svg";
 import LogoMBD from "../svgs/MarieBarbé.svg";
 import PhotoMB from "../svgs/fdp.svg";
-import BackgroundVege from "../svgs/vegetables.svg";
 
 import styles from "./header.module.scss";
 
 function Header() {
     return (
-        <div  className={styles.header}>
+        <div className={styles.header}>
             <div className={styles.logoTitle}>
                 <div className={styles.logo}>
                     <LogoMBD />

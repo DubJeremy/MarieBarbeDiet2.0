@@ -6,8 +6,8 @@ import styles from "./program.module.scss";
 
 function Program() {
     return (
-        <div className={styles.program}>
-            <h2>Programme</h2>
+        <div id="appointment" className={styles.program}>
+            <h2>PROGRAMME</h2>
             <div className={`${styles.first} ${styles.appointment}`}>
                 <div className={styles.containerLeft}>
                         <h4>Compter environ 1 heure</h4>

@@ -6,12 +6,13 @@
     width: 100%;
     display: grid;
     grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 10vh 10vh 1fr 10vh 1fr;
+    grid-template-rows: auto 10vh 1fr 10vh 1fr;
 
     h2 {
         @include flex;
-        font-family: "PlayD-B";
-        font-size: 1.5em;
+        font-family: "Ranade-M";
+        margin: 5vh 0 2vh 0;
+        font-size: 1.2em;
         color: $blue;
         grid-column: 2/3;
         grid-row: 1/2;
@@ -81,7 +82,7 @@
             background: rgb(254, 229, 174);
             background: linear-gradient(
                 0deg,
-                $background 45%,
+                $greentea 45%,
                 $darkbackground 100%
             );
             opacity: 0.8;
@@ -116,7 +117,7 @@
     }
 
     p {
-        font-family: "Lato-B";
+        font-family: "Ranade-B";
         font-size: 1.6em;
         line-height: 1.1em;
         text-align: center;

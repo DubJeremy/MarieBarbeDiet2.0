@@ -5,12 +5,17 @@
     @include flex;
     position: relative;
 
+    h2 {
+        font-family: "Ranade-M";
+        font-size: 1.2em;
+        padding-bottom: 8vh;
+    }
     .card {
         border: 1px solid black;
         @include flex;
         position: relative;
         width: 70%;
-        padding: 20px;
+        padding: 40px;
         background-color: rgb(205, 186, 205);
         color: $blue;
         .border {
@@ -23,11 +28,6 @@
             height: calc(100% + 40px);
             border: 1px solid black;
         }
-        h3 {
-            font-family: "PlayD-M";
-            font-size: 4em;
-            padding-bottom: 40px;
-        }
         .lightReflection {
             width: 10%;
             position: absolute;
@@ -37,7 +37,7 @@
         }
         .contactLink {
             width: 100%;
-            font-family: "Lato-B";
+            font-family: "Ranade-B";
             font-size: 1.5em;
             @include flex;
 

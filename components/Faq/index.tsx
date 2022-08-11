@@ -16,7 +16,7 @@ function Faq() {
     };
 
     return (
-        <div className={styles.faq}>
+        <div id="faq" className={styles.faq}>
             <h2>Foire aux Questions</h2>
             <div>
                 <div className={styles.questions}>

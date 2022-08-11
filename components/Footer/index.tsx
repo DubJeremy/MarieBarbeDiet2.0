@@ -25,7 +25,7 @@ function Footer() {
             <div className={styles.txt}>
                 <div>
                     <h3>Marie Barbé Diététicienne Nutritionniste Bordeaux</h3>
-                    <p>© Copyright 2021 - Tous droits réservés</p>
+                    <p>© Copyright 2022 - Tous droits réservés</p>
                 </div>
                 <div>
                     <p>Website by Dubois Jérémy</p>
