@@ -24,13 +24,13 @@ const Home: NextPage = () => {
             </Head>
 
             <Header />
-            <Summary />
+            {/* <Summary />
             <Presentation />
             <Services />
             <Program />
             <Faq />
             <Contact />
-            <Footer />
+            <Footer /> */}
         </div>
     );
 };

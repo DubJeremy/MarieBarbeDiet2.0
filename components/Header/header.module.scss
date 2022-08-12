@@ -1,14 +1,13 @@
 @import "styles/variables.scss";
 
 .header {
-    
     .logoTitle {
         @include flex;
         width: 100%;
         padding-top: 35px;
-        
+
         .logo {
-            width: 15%;
+            width: 35%;
         }
         h1 {
             color: $blue;
@@ -22,32 +21,28 @@
         margin-top: calc(50px + 2vh);
         padding: 0 35px;
         @include flex($just: space-around, $dir: row);
-        // position: relative;
 
         .photoMB {
             border: 1px solid black;
-            min-width: 35vw;
-            max-width: 50%;
-            padding: 20px;
-            // background-color: $greentea;
+            width: 100%;
+            padding: 15px;
             z-index: 1;
-            background: url(../../public/images/VBackground.png);
+            background: url(../../public/images/HBackground.png);
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
         .intro {
-            width: 35vw;
+            width: 100%;
             @include flex;
             text-align: center;
             position: relative;
-            padding: 20px;
+            padding: 40px 0;
 
             h2 {
                 z-index: 1;
                 font-family: "Faviotte";
-                // font-family: "PlayD-B";
                 font-size: 2.8em;
                 margin-bottom: 15px;
                 color: $blue;
@@ -71,15 +66,183 @@
                 cursor: pointer;
             }
         }
+    }
+}
+@media screen and (min-width: $small) {
+    .header {
+        .logoTitle {
+            .logo {
+                width: 25%;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+        .content {
+            .photoMB {
+                width: 75%;
+            }
+            .intro {
+                width: 75%;
+            }
+        }
+    }
+}
+@media screen and (min-width: $medium) {
+    .header {
+        .logoTitle {
+            h1 {
+                font-size: 2.8em;
+            }
+        }
+        .content {
+            .photoMB {
+                width: 65%;
+                padding: 20px;
+            }
+            .intro {
+                width: 65%;
+                padding: 60px 0;
+                h2 {
+                    font-size: 3.5em;
+                    margin-bottom: 25px;
+                }
+                p {
+                    width: 90%;
+                    font-size: 1.5em;
+                    margin-bottom: 30px;
+                }
+                .plus {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+}
 
-        // .backgroundVege {
-        //     height: calc(200px + 12vh);
-        //     width: 100%;
-        //     background-color: aqua;
-        //     z-index: 0;
-        //     overflow: hidden;
-        //     position: absolute;
-        //     bottom: calc(-350px - -5vh);
-        // }
+@media screen and (min-width: $large) {
+    .header {
+        .logoTitle {
+            padding-top: 50px;
+
+            .logo {
+                width: 15%;
+            }
+        }
+        .content {
+            padding: 0 50px;
+
+            .photoMB {
+                width: 40%;
+                padding: 20px;
+            }
+            .intro {
+                width: 40%;
+
+                h2 {
+                    font-size: 3em;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 1.5em;
+                    line-height: 1.1em;
+                    margin-bottom: 25px;
+                }
+                .plus {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: $large) and (orientation: landscape) and (min-width: $small) {
+    .header {
+        .logoTitle {
+            padding-top: 35px;
+
+            .logo {
+                width: 20%;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+        .content {
+            margin-top: calc(35px + 2vh);
+            padding: 0 50px;
+
+            .photoMB {
+                width: 30%;
+                padding: 10px;
+            }
+            .intro {
+                width: 50%;
+
+                h2 {
+                    font-size: 2em;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 1.2em;
+                    line-height: 1.1em;
+                    margin-bottom: 15px;
+                }
+                .plus {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $extra-large) {
+    .header {
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+        grid-template-rows: 1fr;
+        .logoTitle {
+            grid-column: 2/3;
+            padding-top: calc(50px + 5vh);
+
+            .logo {
+                width: 15%;
+            }
+        }
+        .content {
+            grid-column: 2/3;
+            margin-top: calc(50px + 5vh);
+            padding: 0;
+            @include flex($just: space-between, $dir: row);
+
+            .photoMB {
+                width: 40%;
+                padding: 20px;
+            }
+            .intro {
+                width: 45%;
+
+                h2 {
+                    font-size: 3em;
+                    margin-bottom: calc(10px + 2vh);
+                }
+                p {
+                    width: 80%;
+                    font-size: 1.5em;
+                    line-height: 1.1em;
+                    margin-bottom: 25px;
+                }
+                .plus {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $ultra-large) {
+    .header {
+        grid-template-columns: 25% 50% 25%;
     }
 }

@@ -30,42 +30,41 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-  ol,
-  ul {
+}
+ol,
+ul {
     list-style: none;
-  }
-  blockquote,
-  q {
+}
+blockquote,
+q {
     quotes: none;
 }
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+    content: "";
+    content: none;
 }
 table {
     border-collapse: collapse;
     border-spacing: 0;
-  }
-  @media screen and (orientation: landscape) {
+}
+@media screen and (orientation: landscape) {
     body {
-      background: url(../public/images/HBackground.png);
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+        background: url(../public/images/HBackground.png);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
-  }
-  
-  // Fonts -----------------------
-  @font-face {
+}
+// Fonts -----------------------
+@font-face {
     font-family: "PlayD";
     src: url(./fonts/PlayfairDisplay-Regular.ttf);
-  }
-  @font-face {
+}
+@font-face {
     font-family: "PlayD-M";
     src: url(./fonts/PlayfairDisplay-Medium.ttf);
 }
