@@ -2,32 +2,93 @@
 
 .summary {
     position: relative;
-    padding-bottom: 2vh;
+    width: 100%;
 
     .backgroundVege {
-        margin-top: calc(-50px + -4vh);
+        // margin-top: calc(-50px + -4vh);
         height: 200px;
         width: 100%;
         position: relative;
         top: 0;
         left: 0;
-        border: 1px solid black;
+        // border: 1px solid black;
         background-image: url(../../public/images/bawl1.jpg);
-        background-attachment: fixed; 
-        background-size: cover; 
-        background-position: center; 
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
     }
 
     .summaryList {
-        padding: calc(35px + 4vh) 35px;
-        @include flex($just: space-around, $dir: row);
-
-        a {
-            text-decoration: none;
-            color: black;
-            font-family: "PlayD-B";
-            font-size: 2em;
+        width: 100%;
+        // overflow: hidden;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 7vh 16vh 7vh 16vh 7vh 16vh 7vh 16vh 7vh;
+        .link {
+            width: 10%;
+            width: 100%;
+            position: relative;
+            @include flex;
+            grid-column: 2/3;
+            a {
+                width: 100%;
+                position: relative;
+                z-index: 2;
+                text-decoration: none;
+                color: $darkgreen;
+                font-family: "Faviotte";
+                font-size: 3.5em;
+                cursor: pointer;
+            }
+            .svg {
+                position: absolute;
+                z-index: 0;
+                width: 50%;
+                svg {
+                    width: 100%;
+                    opacity: 0.7;
+                }
+            }
+        }
+        .one {
+            grid-row: 2/3;
+            .services {
+                @include flex($align: flex-start);
+                text-align: left;
+            }
+            .svg {
+                right: -10vw;
+            }
+        }
+        .two {
+            grid-row: 4/5;
+            .appointment {
+                text-align: right;
+            }
+            .svg {
+                left: -11vw;
+            }        
+        }
+        .three {
+            grid-row: 6/7;
+            .faq {
+                text-align: left;
+            }
+            .svg {
+                right: -8vw;
+            }
+            
+        }
+        .four {
+            grid-row: 8/9;
+            
+            .contact {
+                text-align: right;
+            }
+            .svg {
+                left: -8vw;
+            }        
         }
     }
 }

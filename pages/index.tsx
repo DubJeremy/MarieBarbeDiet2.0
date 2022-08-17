@@ -24,8 +24,8 @@ const Home: NextPage = () => {
             </Head>
 
             <Header />
-            {/* <Summary />
-            <Presentation />
+            <Summary />
+            {/* <Presentation />
             <Services />
             <Program />
             <Faq />

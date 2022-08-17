@@ -29,9 +29,6 @@ function Header() {
                     </p>
                     <div className={styles.plus}>+</div>
                 </div>
-                {/* <div className={styles.backgroundVege}>
-                    <BackgroundVege />
-                </div> */}
             </div>
         </div>
     );

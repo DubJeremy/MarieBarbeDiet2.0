@@ -1,5 +1,4 @@
 $greentea: #E8EFE9;
-$darkgreen: #303633;
 $flashygreen: #629677;
 $orange: #EF8354;
 $purple: #9C7A97;
@@ -8,12 +7,11 @@ $darkbackground: #b3b3b5;
 $yellow: #FFD782;
 $yellowlight: #fee5ae;
 $green: #46A8A7;
-$blue: #334F64;
 
 $background: #E8EFE9;
 $cream: #FCF3F3;
 $brown: #a77464ff;
-$blue: #143642ff;
+$darkgreen: #143642ff;
 
 // Mixin -----------------------
 @mixin flex ($just: center, $align: center, $dir:column, $wrap: wrap)  
