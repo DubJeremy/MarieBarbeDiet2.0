@@ -5,13 +5,12 @@
     width: 100%;
 
     .backgroundVege {
-        // margin-top: calc(-50px + -4vh);
         height: 200px;
         width: 100%;
         position: relative;
         top: 0;
         left: 0;
-        // border: 1px solid black;
+        border: 1px solid black;
         background-image: url(../../public/images/bawl1.jpg);
         background-attachment: fixed;
         background-size: cover;
@@ -24,9 +23,8 @@
         // overflow: hidden;
         display: grid;
         grid-template-columns: 10% 80% 10%;
-        grid-template-rows: 7vh 16vh 7vh 16vh 7vh 16vh 7vh 16vh 7vh;
+        grid-template-rows: 18vh 16vh 7vh 16vh 7vh 16vh 7vh 16vh 18vh;
         .link {
-            width: 10%;
             width: 100%;
             position: relative;
             @include flex;
@@ -91,4 +89,146 @@
             }        
         }
     }
+}
+@media screen and (max-width: $extra-small) {
+    .summary {
+        .summaryList {
+            grid-template-rows: 15vh 18vh 7vh 18vh 7vh 18vh 7vh 18vh 7vh;
+            .link {
+                a {
+                    font-size: 2.8em;
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (min-width: $small) {
+    .summary {
+        .summaryList {
+            grid-template-rows: 15vh 18vh 7vh 18vh 7vh 18vh 7vh 18vh 15vh;
+            .link {
+                a {
+                    font-size: 4em;
+                }
+            }
+            .one {
+                .svg {
+                    right: 0vw;
+                }
+            }
+            .two {
+                .svg {
+                    left: 0vw;
+                }        
+            }
+            .three {
+                .svg {
+                    right: 5vw;
+                }
+                
+            }
+            .four {
+                grid-row: 8/9;
+                
+                .contact {
+                    text-align: right;
+                }
+                .svg {
+                    left: 0vw;
+                }        
+            }
+        }
+    }
+    
+}
+@media screen and (min-width: $medium) {
+    .summary {
+        .summaryList {
+            grid-template-rows: 18vh 17vh 7vh 17vh 7vh 17vh 7vh 17vh 18vh;
+            .link {
+                a {
+                    font-size: 5.5em;
+                }
+                .svg {
+                    width: 40%;
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (min-width: $large) {
+    .summary {
+        margin-top: -5vh;
+        .backgroundVege {
+            height: 250px;
+        }
+        .summaryList {
+            grid-template-rows: 18vh 15vh 8vh 15vh 8vh 15vh 8vh 15vh 18vh;
+            .link {
+                a {
+                    font-size: 6.5em;
+                }
+            }
+        }
+    }   
+}
+@media screen and (max-width: $extra-large) and (orientation: landscape) and (min-width: $small) {
+    .summary {
+        margin-top: -10vh;
+        overflow: hidden;
+        .backgroundVege {
+            height: 200px;
+        }
+        .summaryList {
+            grid-template-rows: 18vh 30vw 5vh 30vw 5vh 30vw 5vh 30vw 18vh;
+            .link {
+                a {
+                    font-size: 6em;
+                    max-width: 70%;
+                }
+                .svg {
+                    width: 30%;
+                }
+            }
+        }
+    }   
+}
+@media screen and (min-width: $extra-large) {
+    .summary {
+        .backgroundVege {
+            height: 300px;
+        }
+        .summaryList {
+            .link {
+                a {
+                    font-size: 9em;
+                }
+                .svg {
+                    width: 40%;
+                }
+            }
+        }
+    }   
+    
+}
+@media screen and (min-width: $ultra-large) {
+    .summary {
+        margin-top: -10vh;
+        .summaryList {
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: 18vh 30vh 10vh 30vh 10vh 30vh 10vh 30vh 18vh;
+            .link {
+                a {
+                    font-size: 8em;
+                    max-width: 70%;
+                }
+                .svg {
+                    width: 30%;
+                }
+            }
+        }
+    }   
+
 }

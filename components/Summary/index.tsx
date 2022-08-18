@@ -16,7 +16,7 @@ function Summary() {
             <div className={styles.summaryList}>
                 <Link href="#services">
                     <div className={`${styles.link} ${styles.one}`}>
-                        <a className={styles.services}>Pour qui?</a>
+                        <a className={styles.services}>Pour qui ?</a>
                         <div className={styles.svg}>
                             <One />
                         </div>

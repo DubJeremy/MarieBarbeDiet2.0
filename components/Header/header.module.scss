@@ -44,6 +44,7 @@
                 z-index: 1;
                 font-family: "Faviotte";
                 font-size: 2.8em;
+                line-height: 1.2em;
                 margin-bottom: 15px;
                 color: $darkgreen;
             }
@@ -157,7 +158,7 @@
         }
     }
 }
-@media screen and (max-width: $large) and (orientation: landscape) and (min-width: $small) {
+@media screen and (max-width: $extra-large) and (orientation: landscape) and (min-width: $small) {
     .header {
         .logoTitle {
             padding-top: 35px;
