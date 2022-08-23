@@ -3,32 +3,36 @@
 .presentation {
     // height: 90vh;
     @include flex;
-    
+    padding: 0 calc(10% - 10px);
+
     h2 {
-        font-family: "Ranade-M";
+        font-family: "Ranade-B";
         font-size: 1.2em;
         margin-bottom: 8vh;
-        color: $blue;
+        color: $darkgreen;
     }
     .txtimage {
-
-        @include flex($just: space-between, $dir: row);
         .background {
-            @include flex;
             flex: 2;
-            padding: 65px 15%;
-            // max-height: 90vh;
-            
+            padding: 15px;
+            height: 90vh;
+            overflow: scroll;
+            background-color: $greentea;
+            border-radius: 20px;
+            // padding-top: 100vh;
+
             p {
                 font-family: "Ranade";
                 font-size: 1.5em;
                 line-height: 1.1em;
                 text-align: center;
+                padding-bottom: 2vh;
+                // padding: 0 5px 2vh 5px;
                 &:last-child {
                     font-family: "PlayD";
-                    font-size: 1.8em;
+                    font-size: 3em;
                     margin-top: 10px;
-                    color: $blue;
+                    color: $darkgreen;
                 }
             }
         }

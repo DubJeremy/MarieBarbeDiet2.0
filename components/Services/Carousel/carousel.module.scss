@@ -1,0 +1,78 @@
+@import "styles/variables.scss";
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    @include flex;
+    overflow: hidden;
+    font-family: "Faviotte";
+    font-size: 2em;
+    color: $darkgreen;
+    .pagination {
+        border-bottom: 1px solid $darkgreen;
+        @include flex($dir:row, $wrap: nowrap);
+        width:60%;
+        height: 30px;
+        padding: 10px;
+    }
+    .container {
+        width:100%;
+        height: 100px;
+        position: relative;
+        @include flex($dir: row, $wrap: nowrap);
+        
+        .slides {
+            height: 55px;
+            width: 60vw;
+            @include flex;
+            position: absolute;
+            .slide {
+                @include flex;
+                width: 100%;
+                height: 100%;
+                // background-color: $yellowlight;
+                text-align: center;
+                p {
+                    background: transparent;
+                }
+            }
+            .currentSlide {
+                position: relative;
+                .prev {
+                    position: absolute;
+                    left: -55vw;
+                }
+                .next {
+                    position: absolute;
+                    left: 55vw;
+                }
+                .prevX2 {
+                    position: absolute;
+                    left: -110vw;
+                    
+                }
+                .prevX3 {
+                    position: absolute;
+                    left: -165vw;
+                    
+                }
+                .prevX4 {
+                    position: absolute;
+                    left: -220vw;
+                }
+                .nextX2 {
+                    position: absolute;
+                    left: 110vw;
+                }
+                .nextX3 {
+                    position: absolute;
+                    left: 165vw;
+                }
+                .nextX4 {
+                    position: absolute;
+                    left: 220vw;
+                }
+            }
+        }
+    }
+}

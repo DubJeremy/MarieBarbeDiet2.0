@@ -49,9 +49,9 @@ function Presentation() {
                     <p>Prenez les devants,</p>
                     <p>Créez votre changement.</p>
                 </div>
-                <div className={styles.illustration}>
-                    {/* <HealthyPlate /> */}
-                </div>
+                {/* <div className={styles.illustration}>
+                    <HealthyPlate />
+                </div> */}
             </div>
         </div>
     );

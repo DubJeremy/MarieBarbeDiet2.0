@@ -1,0 +1,25 @@
+@import "styles/variables.scss";
+
+.dotContainer {
+    width: 12vw;
+    @include flex($dir:row, $wrap: nowrap);
+    padding-bottom: 5px ;
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        background: $darkbackground;
+        border-radius: 50%;
+        position: relative;
+        
+        .dotHighlight {
+            background: $darkgreen;
+            border-radius: 50%;
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: -2px;
+            left: -2px;
+        }
+    }
+}

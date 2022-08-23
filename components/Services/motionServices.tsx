@@ -3,41 +3,90 @@ export const Contenair = {
     start: {},
     exit: {},
 };
-export const Right = {
+export const Img = {
     init: {
-        x: 500,
+        opacity: 0,
+        scale: 0.5,
     },
     start: {
-        x: 0,
+        opacity: 1,
+        scale: 1,
         transition: {
-            ease: "easeOut",
-            duration: 0.7,
+            duration: 0.8,
+            ease: "backOut",
         },
     },
     exit: {
-        x: 500,
+        opacity: 0,
+        scale: 0.5,
         transition: {
-            ease: "linear",
-            duration: 0.15,
+            duration: 0.3,
+            ease: "anticipate",
         },
     },
 };
-export const Left = {
+export const Desc = {
     init: {
-        x: -500,
+        opacity: 0,
+        y: 50,
     },
     start: {
-        x: 0,
+        opacity: 1,
+        y: 0,
         transition: {
+            duration: 0.8,
             ease: "easeOut",
-            duration: 0.7,
         },
     },
     exit: {
-        x: -500,
+        opacity: 0,
+        y: -50,
         transition: {
-            ease: "linear",
-            duration: 0.15,
+            duration: 0.3,
+            ease: "anticipate",
         },
-    },  
+    },
 };
+// export const Contenair = {
+//     init: {},
+//     start: {},
+//     exit: {},
+// };
+// export const Right = {
+//     init: {
+//         x: 500,
+//     },
+//     start: {
+//         x: 0,
+//         transition: {
+//             ease: "easeOut",
+//             duration: 0.7,
+//         },
+//     },
+//     exit: {
+//         x: 500,
+//         transition: {
+//             ease: "linear",
+//             duration: 0.15,
+//         },
+//     },
+// };
+// export const Left = {
+//     init: {
+//         x: -500,
+//     },
+//     start: {
+//         x: 0,
+//         transition: {
+//             ease: "easeOut",
+//             duration: 0.7,
+//         },
+//     },
+//     exit: {
+//         x: -500,
+//         transition: {
+//             ease: "linear",
+//             duration: 0.15,
+//         },
+//     },
+// };

@@ -25,12 +25,12 @@ const Home: NextPage = () => {
 
             <Header />
             <Summary />
-            {/* <Presentation />
+            {/* <Presentation /> */}
             <Services />
-            <Program />
-            <Faq />
-            <Contact />
-            <Footer /> */}
+            {/* <Program /> */}
+            {/* <Faq /> */}
+            {/* <Contact /> */}
+            {/* <Footer /> */}
         </div>
     );
 };
