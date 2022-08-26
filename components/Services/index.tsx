@@ -70,6 +70,7 @@ function Services() {
                                     : ""
                             }
                             onHoverStart={() => setSelectedService(service)}
+                            onClick={() => setSelectedService(service)}
                         >
                             {service.title}
                         </motion.h3>

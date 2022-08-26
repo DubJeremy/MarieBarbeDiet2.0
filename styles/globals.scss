@@ -25,11 +25,6 @@ section {
 }
 body {
     line-height: 1;
-    background: url(../public/images/VBackground.png);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 ol,
 ul {
@@ -50,15 +45,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-@media screen and (orientation: landscape) {
-    body {
-        background: url(../public/images/HBackground.png);
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-}
+
 // Fonts -----------------------
 @font-face {
     font-family: "PlayD";

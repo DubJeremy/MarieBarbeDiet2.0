@@ -10,27 +10,27 @@
     color: $darkgreen;
     .pagination {
         border-bottom: 1px solid $darkgreen;
-        @include flex($dir:row, $wrap: nowrap);
-        width:60%;
+        @include flex($dir: row, $wrap: nowrap);
+        width: 60%;
         height: 30px;
         padding: 10px;
     }
     .container {
-        width:100%;
+        width: 100%;
         height: 100px;
         position: relative;
         @include flex($dir: row, $wrap: nowrap);
-        
+
         .slides {
             height: 55px;
             width: 60vw;
             @include flex;
             position: absolute;
             .slide {
+                cursor: pointer;
                 @include flex;
                 width: 100%;
                 height: 100%;
-                // background-color: $yellowlight;
                 text-align: center;
                 p {
                     background: transparent;
@@ -49,12 +49,10 @@
                 .prevX2 {
                     position: absolute;
                     left: -110vw;
-                    
                 }
                 .prevX3 {
                     position: absolute;
                     left: -165vw;
-                    
                 }
                 .prevX4 {
                     position: absolute;
@@ -72,6 +70,56 @@
                     position: absolute;
                     left: 220vw;
                 }
+            }
+        }
+    }
+}
+@media screen and (max-width: $extra-small) {
+    .carousel {
+        font-size: 1.7em;
+        .container {
+            .slides {
+                width: 55vw;
+            }
+        }
+    }
+}
+@media screen and (min-width: $small) {
+    .carousel {
+        font-size: 2.2em;
+    }
+}
+@media screen and (min-width: $medium) {
+    .carousel {
+        font-size: 3.5em;
+        .pagination {
+            width: 50%;
+            height: 50px;
+            padding: 5px;
+        }
+        .container {
+            height: 170px;
+            .slides {
+                width: 60vw;
+            }
+        }
+    }
+}
+@media screen and (max-width: $extra-large) and (orientation: landscape) {
+    .carousel {
+        @include flex($just: flex-end);
+        height: 30vh;
+        font-size: 2.8em;
+        .pagination {
+            width: 45%;
+            height: 20px;
+            padding: 5px;
+        }
+        .container {
+            height: 120px;
+    
+            .slides {
+                width: 40vw;
             }
         }
     }

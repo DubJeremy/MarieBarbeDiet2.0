@@ -11,6 +11,7 @@
         background: $darkbackground;
         border-radius: 50%;
         position: relative;
+        cursor: pointer;
         
         .dotHighlight {
             background: $darkgreen;
@@ -22,4 +23,18 @@
             left: -2px;
         }
     }
+}
+@media screen and (min-width: $medium) {
+    .dotContainer {
+        .dot {
+            width: 15px;
+            height: 15px;
+            
+            .dotHighlight {
+                width: 19px;
+                height: 19px;
+            }
+        }
+    }
+    
 }

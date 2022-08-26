@@ -10,6 +10,8 @@ import Program from "../components/Program";
 import Summary from "../components/Summary";
 import Services from "../components/Services";
 
+import styles from "./main.module.scss";
+
 const Home: NextPage = () => {
     return (
         <div>
@@ -22,15 +24,18 @@ const Home: NextPage = () => {
                 />
                 <title>Marie Barbé Diet</title>
             </Head>
-
-            <Header />
-            <Summary />
-            {/* <Presentation /> */}
-            <Services />
-            {/* <Program /> */}
-            {/* <Faq /> */}
-            {/* <Contact /> */}
-            {/* <Footer /> */}
+            <div className={styles.main}>
+                <div className={styles.sections}>
+                    <Header />
+                    <Summary />
+                    {/* <Presentation /> */}
+                    <Services />
+                    <Program />
+                    {/* <Faq /> */}
+                    {/* <Contact /> */}
+                    {/* <Footer /> */}
+                </div>
+            </div>
         </div>
     );
 };

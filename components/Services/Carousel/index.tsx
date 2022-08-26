@@ -6,6 +6,7 @@ import { AllServices } from "../AllServices";
 import Pagination from "./Pagination";
 
 import styles from "./carousel.module.scss";
+import useMediaQuery from "../../../tools/useMediaQuery";
 
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
@@ -29,6 +30,7 @@ export default function Carousel({
     const [nextSlide, setNextSlide] = useState(0);
     const [x2PrevSlide, setX2PrevSlide] = useState(0);
     const [x2NextSlide, setX2NextSlide] = useState(0);
+    const [targetReached] = useMediaQuery(`(min-width: 768px)`);
 
     useEffect(() => {
         if (serviceIndex === 0) {

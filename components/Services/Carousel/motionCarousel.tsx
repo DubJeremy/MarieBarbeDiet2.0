@@ -27,7 +27,6 @@ export const CarouselAnim = {
     },
 };
 
-
 export const TitleAnim = {
     enter: (direction: number) => {
         return {
@@ -51,7 +50,7 @@ export const TitleNextPrev = {
     },
     center: {
         scale: 1,
-        opacity:1,
+        opacity: 1,
         transition: {
             duration: 0.3,
             ease: "easeOut",
