@@ -1,126 +1,128 @@
 @import "styles/variables.scss";
 
 .program {
-    // overflow: hidden;
     position: relative;
     width: 100%;
     display: grid;
-    grid-template-columns: 15% 70% 15%;
-    grid-template-rows: auto 10vh 1fr 10vh 1fr;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 20vh 60vh 10vh 60vh 10vh;
 
     h2 {
-        @include flex;
-        font-family: "Ranade-M";
-        margin: 5vh 0 2vh 0;
-        font-size: 1.2em;
-        color: $blue;
         grid-column: 2/3;
         grid-row: 1/2;
+        @include flex;
+        font-family: "Ranade-B";
+        font-size: 1.2em;
     }
     .first {
         grid-column: 2/3;
-        grid-row: 3/4;
-        > .containerLeft {
+        grid-row: 2/3;
+        > .right {
+            > h3 {
+            }
+        }
+        > .left {
             background: url(../../public/images/coffeSnack.svg);
-            background-attachment: fixed; 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat;
-            padding: 10%;
+            > .glassEffect {
+            }
         }
     }
-    .next {
+    .second {
         grid-column: 2/3;
-        grid-row: 5/6;
-        > .containerRight {
-            // background: url(../../public/images/fruits.jpg);
+        grid-row: 4/5;
+        > .right {
             background: url(../../public/images/plate1.jpg);
-            background-attachment: fixed; 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat;
-            padding: 10%;
+            > .glassEffect {
+            }
+        }
+        > .left {
+            > h3 {
+            }
         }
     }
     .appointment {
+        width: 100%;
+        height: 100%;
         display: grid;
-        grid-template-columns: 45% 10% 45%;
+        grid-template-columns: 47.5% 5% 47.5%;
         grid-template-rows: 100%;
-        height: 90vh;
-        position: relative;
-
-        .containerRight {
-            grid-column: 1/2;
-            grid-row: 1/2;
-            background-color: transparent;
-            position: relative;
-            > h3 {
-                right: 0;
-            }
-            > .glassEffect {
-                grid-column: 1/2;
-                grid-row: 1/2;
-            }
-        }
-        .containerLeft {
+        .right {
+            width: 100%;
+            height: 100%;
             grid-column: 3/4;
             grid-row: 1/2;
-            position: relative;
+        }
 
-            > h3 {
-                left: 0;
-            }
-            > .glassEffect {
-                grid-column: 3/4;
-                grid-row: 1/2;
-            }
-        }
-        .glassEffect {
-            width: 90%;
-            height: 95%;
-            background-color: $yellow;
-            background: rgb(254, 229, 174);
-            background: linear-gradient(
-                0deg,
-                $greentea 45%,
-                $darkbackground 100%
-            );
-            opacity: 0.8;
-            position: absolute;
-            z-index: 0;
-            top: 2.5%;
-            left: 5%;
-        }
-        .center {
-            height: 100%;
+        .left {
             width: 100%;
-            @include flex;
-            position: relative;
-            z-index: 1;
+            height: 100%;
+            grid-column: 1/2;
+            grid-row: 1/2;
         }
-    }
-    h3 {
-        position: sticky;
-        top: 0;
-        font-family: "PlayD-B";
-        font-size: 3em;
-        color: $blue;
-    }
-    h4 {
-        position: relative;
-        z-index: 1;
-        font-family: "PlayD-B";
-        font-size: 1.2em;
-        color: $blue;
-        text-align: center;
-        padding-top: 5px;
-    }
+        h3 {
+            position: sticky;
+            top: 0;
+            font-family: "PlayD-B";
+            font-size: 1.6em;
+            color: $darkgreen;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 10% 80% 10%;
+            grid-template-rows: 3% 94% 3%;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            .glassEffect {
+                width: 100%;
+                grid-column: 2/3;
+                grid-row: 2/3;
+                position: relative;
+                z-index: 0;
+                background: linear-gradient(
+                    0deg,
+                    $greentea 45%,
+                    $darkbackground 100%
+                    );
+                    opacity: 0.8;
+                }
+                .txt {
+                    width: 100%;
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                    position: relative;
+                    z-index: 1;
+                    display: grid;
+                    grid-template-columns: 5% 90% 5%;
+                    grid-template-rows: 2% 20% 76% 2%;
+                h4 {
+                    width: 100%;
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                    font-family: "PlayD-B";
+                    font-size: 0.9em;
+                    color: $darkgreen;
+                    text-align: center;
+                }
+                .center {
+                    width: 100%;
+                    grid-column: 2/3;
+                    grid-row: 2/4;
+                    @include flex($wrap: nowrap);
 
-    p {
-        font-family: "Ranade-B";
-        font-size: 1.6em;
-        line-height: 1.1em;
-        text-align: center;
-        padding: 15px 20px;
+                    p {
+                        width: 100%;
+                        font-family: "Ranade-M";
+                        font-size: 0.7em;
+                        line-height: 1.1em;
+                        text-align: center;
+                    }
+                }
+            }
+        }
     }
 }
