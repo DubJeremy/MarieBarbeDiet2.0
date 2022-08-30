@@ -4,6 +4,7 @@
     @include flex;
     overflow: hidden;
     height: auto;
+    min-height: 100vh;
     h2 {
         font-family: "Ranade-B";
         margin: 5vh 0;
