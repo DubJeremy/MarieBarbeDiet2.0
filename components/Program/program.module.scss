@@ -162,12 +162,14 @@
         }
     }
 }
-@media screen and (min-width: $medium) {
+@media screen and  (min-width: $medium) {
     .program {
+        grid-template-columns: 10% 80% 10%;
         h2 {
             font-size: 1.5em;
         }
         .appointment {
+            grid-template-columns: 45% 10% 45%;
             h3 {
                 font-size: 3.2em;
             }
@@ -184,5 +186,155 @@
                 }
             }
         }
+    }
+}
+@media screen and (min-width: $large) {
+    .program {
+        grid-template-columns: 10% 80% 10%;
+        .appointment {
+            h3 {
+                font-size: 3.6em;
+            }
+            .container {
+                .txt {
+                    h4 {
+                        font-size: 2em;
+                    }
+                    .center {
+                        p {
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (orientation: landscape) {
+    .program {
+        grid-template-rows: 50vh 150vh 10vh 150vh 10vh;
+        grid-template-columns: 12% 76% 12%;
+        
+        .appointment {
+            grid-template-columns: 45% 10% 45%;
+            h3 {
+                font-size: 1.6em;
+            }
+            .container {
+                grid-template-columns: 5% 90% 5%;
+                grid-template-rows: 3% 94% 3%;
+                .txt {
+                    .center {
+                        p {
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (orientation: landscape) and (min-width: $medium) {
+    .program {
+        .appointment {
+            grid-template-columns: 45% 10% 45%;
+            h3 {
+                font-size: 2.8em;
+            }
+            .container {
+                grid-template-columns: 8% 84% 8%;
+                grid-template-rows: 4% 92% 4%;
+                .txt {
+                    .center {
+                        p {
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (orientation: landscape) and (min-width: $large) {
+    .program {
+        grid-template-rows: 40vh 150vh 25vh 150vh 25vh;
+        grid-template-columns: 15% 70% 15%;
+
+        .appointment {
+            h3 {
+                font-size: 3.1em;
+            }
+            .container {
+                grid-template-rows: 3% 94% 3%;
+                .txt {
+                    h4 {
+                        font-size: 1.8em;
+                    }
+                    .center {
+                        p {
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (orientation: landscape) and (min-width: $extra-large) {
+    .program {
+        grid-template-rows: 30vh 130vh 20vh 130vh 20vh;
+        grid-template-columns: 15% 70% 15%;
+
+        .appointment {
+            h3 {
+                font-size: 4.2em;
+            }
+            .container {
+                grid-template-rows: 2.5% 95% 2.5%;
+                .txt {
+                    h4 {
+                        font-size: 1.5em;
+                    }
+                    .center {
+                        p {
+                            font-size: 1.8em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (orientation: landscape) and (min-width: $ultra-large) {
+    .program {
+        grid-template-rows: 30vh 130vh 20vh 130vh 20vh;
+        grid-template-columns: 15% 70% 15%;
+
+        .appointment {
+            h3 {
+                font-size: 5em;
+            }
+            .container {
+                width: 70%;
+                margin-left: 15%;
+                grid-template-rows: 2.5% 95% 2.5%;
+                .txt {
+                    h4 {
+                        font-size: 1.5em;
+                    }
+                    .center {
+                        p {
+                            font-size: 1.7em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-height: $extra-large) and (orientation: portrait) {
+    .program {
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 20vh 65vh 10vh 65vh 10vh;
     }
 }
