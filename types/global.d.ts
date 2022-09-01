@@ -1,6 +1,6 @@
 declare namespace Faq {
     interface QuestionAnswer {
         question: string;
-        answerF: string;
+        answer: string;
     }
 }

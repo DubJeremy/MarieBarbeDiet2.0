@@ -7,14 +7,12 @@ export const AnswerAnim = {
     init: {
         height: 10,
         width: "45%"
-        // opacity: 0,
     },
     start: {
         height: "55%",
         width: "75%",
         transition: {
             delay: 0.5,
-            // ease: "anticipate",
             duration: 0.8,
         },
     },
@@ -24,7 +22,6 @@ export const AnswerAnim = {
         overflow: "hidden",
         transition: {
             delay: 0.15,
-            // ease: "anticipate",
             duration: 0.5,
         },
     },
@@ -48,7 +45,6 @@ export const TxtAnim = {
         opacity: 0,
         overflow: "hidden",
         transition: {
-            // ease: "anticipate",
             duration: 0.3,
         },
     },
