@@ -26,7 +26,6 @@ function Services() {
         return () => clearTimeout(loading);
     }, [serviceIndex]);
 
-
     return (
         <div id="services" className={styles.services}>
             <h2>SERVICES</h2>
@@ -52,12 +51,14 @@ function Services() {
                             </motion.div>
                         </motion.div>
                     </AnimatePresence>
-                    <Carousel
-                        paginate={paginate}
-                        serviceIndex={serviceIndex}
-                        page={page}
-                        direction={direction}
-                    />
+                    <div className={styles.carousel}>
+                        <Carousel
+                            paginate={paginate}
+                            serviceIndex={serviceIndex}
+                            page={page}
+                            direction={direction}
+                        />
+                    </div>
                 </>
             ) : (
                 <div className={styles.containerDesktop}>

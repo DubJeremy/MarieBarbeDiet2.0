@@ -18,8 +18,8 @@
 @media screen and (orientation: landscape) {
     .main {
         .sections {
-            border-left: 3px solid $darkgreen;
-            border-right: 3px solid $darkgreen;
+            // border-left: 1px solid $darkgreen;
+            // border-right: 1px solid $darkgreen;
             max-width: 1700px;
             background: url(../public/images/HBackground.png);
             background-attachment: fixed;

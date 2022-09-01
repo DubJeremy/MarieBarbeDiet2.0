@@ -5,15 +5,19 @@
     overflow: hidden;
     height: auto;
     min-height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20vh 50vh 30vh;
     h2 {
+        grid-row: 1/2;
+        width: 100%;
         font-family: "Ranade-B";
-        margin: 5vh 0;
         font-size: 1.2em;
+        @include flex;
     }
     .containerMobile {
-        margin-top: 5vh;
+        grid-row: 2/3;
         width: 100%;
-        position: relative;
         @include flex;
 
         .desc {
@@ -26,22 +30,26 @@
             @include flex;
         }
         .illustration {
-            width: 150px;
-            height: 150px;
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
             overflow: hidden;
-            margin-bottom: 5vh;
             svg {
                 height: 100%;
             }
         }
+    }
+    .carousel {
+        grid-row: 3/4;
+        width: 100%;
+        height: 100%;
     }
 }
 
 @media screen and (max-width: $extra-small) {
     .services {
         h2 {
-            margin: 10vh 0;
+            // margin: 10vh 0;
         }
         .containerMobile {
             .desc {
@@ -57,7 +65,7 @@
 @media screen and (min-width: $medium) {
     .services {
         h2 {
-            margin: 5vh 0;
+            // margin: 5vh 0;
             font-size: 1.5em;
         }
         .containerMobile {
@@ -66,57 +74,99 @@
                 font-size: 2.5em;
             }
             .illustration {
-                width: 20vh;
-                height: 20vh;
+                width: 25vh;
+                height: 25vh;
             }
         }
     }
 }
-@media screen and (max-width: $extra-large) and (orientation: landscape) {
+@media screen and (min-height: $extra-large) and (orientation: portrait) {
     .services {
-        @include flex($just: space-between, $wrap: nowrap);
-        height: 100vh;
+        min-height: 50vh;
+    }
+}
+// Landscape -------------------------------------------------------
+@media screen and (max-width: $small) and (orientation: landscape) {
+    .services {
+        grid-template-rows: 30vh 65vh 50vh;
+        .containerMobile {
+            .desc {
+                font-size: 1.5em;
+            }
+            .illustration {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
+@media screen and (min-width: $small) and (max-height: $extra-small) and (orientation: landscape) {
+    .services {
+        grid-template-rows:30vh 80vh 50vh;
+        .containerMobile {
+            .desc {
+                font-size: 1.5em;
+            }
+            .illustration {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    }
+}
+@media screen and (min-width: $small) and (min-height: $extra-small) and (orientation: landscape) {
+    .services {
+        grid-template-rows: 50vh 55vh 50vh;
+    }
+}
+@media screen and (min-width: $small) and (min-height: $small) and (orientation: landscape) {
+    .services {
+        grid-template-rows: 30vh 60vh 30vh;
+    }
+}
+@media screen and (min-width: $medium) and (orientation: landscape) {
+    .services {
+        grid-template-rows: 30vh 65vh 40vh;
+        .containerMobile {
+            .desc {
+                font-size: 1.7em;
+            }
+            .illustration {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
+@media screen and (min-width: $large) and (orientation: landscape) {
+    .services {
+        grid-template-rows: 20vh 60vh 30vh;
         h2 {
             font-family: "Ranade-B";
-            margin: 0;
             font-size: 1.5em;
-            height: 10vh;
             @include flex;
         }
         .containerMobile {
-            height: 60vh;
-            margin: 0;
             @include flex;
             .desc {
                 width: 50%;
-                height: 15vh;
                 font-size: 2em;
             }
             .illustration {
-                width: 170px;
-                height: 170px;
-                border-radius: 50%;
-                overflow: hidden;
-                margin-bottom: 5vh;
-                svg {
-                    height: 100%;
-                }
+                width: 190px;
+                height: 190px;
             }
         }
     }
 }
 @media screen and (min-width: $extra-large) {
     .services {
-        min-height: 100vh;
-        h2 {
-            margin-bottom: 10vh;
-        }
+        grid-template-rows: 20vh 80vh;
         .containerDesktop {
+            grid-row: 2/3;
             position: relative;
             width: 100%;
-            min-height: 60vh;
             @include flex($wrap: nowrap);
-            margin-bottom: 5vh;
             h3 {
                 width: 50%;
                 font-family: "PlayD-M";
