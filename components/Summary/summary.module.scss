@@ -17,13 +17,20 @@
         background-position: center;
         background-repeat: no-repeat;
     }
+    h2 {
+        width: 100%;
+        height: 20vh;
+        @include flex;     
+        font-family: "Ranade-B";
+        font-size: 1.2em;
+    }
 
     .summaryList {
         width: 100%;
         // overflow: hidden;
         display: grid;
         grid-template-columns: 10% 80% 10%;
-        grid-template-rows: 18vh 16vh 7vh 16vh 7vh 16vh 7vh 16vh 15vh;
+        grid-template-rows: 5vh 16vh 7vh 16vh 7vh 16vh 7vh 16vh 15vh;
         .link {
             width: 100%;
             position: relative;
@@ -105,8 +112,11 @@
 }
 @media screen and (min-width: $small) {
     .summary {
+        h2 {
+            height: 30vh;
+        }
         .summaryList {
-            grid-template-rows: 15vh 18vh 7vh 18vh 7vh 18vh 7vh 18vh 15vh;
+            grid-template-rows: 5vh 18vh 7vh 18vh 7vh 18vh 7vh 18vh 15vh;
             .link {
                 a {
                     font-size: 4em;
@@ -144,8 +154,12 @@
 }
 @media screen and (min-width: $medium) {
     .summary {
+        h2 {
+            font-size: 1.5em;
+            height: 20vh;
+        }
         .summaryList {
-            grid-template-rows: 18vh 17vh 7vh 17vh 7vh 17vh 7vh 17vh 18vh;
+            grid-template-rows: 5vh 17vh 7vh 17vh 7vh 17vh 7vh 17vh 5vh;
             .link {
                 a {
                     font-size: 5.5em;
@@ -174,6 +188,7 @@
         }
     }   
 }
+// Landscape ------------------------------
 @media screen and (max-width: $extra-large) and (orientation: landscape) and (min-width: $small) {
     .summary {
         margin-top: -10vh;
@@ -182,7 +197,7 @@
             height: 200px;
         }
         .summaryList {
-            grid-template-rows: 18vh 30vw 5vh 30vw 5vh 30vw 5vh 30vw 18vh;
+            grid-template-rows: 5vh 30vw 5vh 30vw 5vh 30vw 5vh 30vw 18vh;
             .link {
                 a {
                     font-size: 6em;
@@ -201,6 +216,7 @@
             height: 300px;
         }
         .summaryList {
+            grid-template-rows: 18vh 30vh 8vh 30vh 8vh 30vh 8vh 30vh 18vh;
             .link {
                 a {
                     font-size: 9em;
@@ -217,7 +233,7 @@
     .summary {
         margin-top: -10vh;
         .summaryList {
-            grid-template-columns: 20% 60% 20%;
+            grid-template-columns: 15% 70% 15%;
             grid-template-rows: 18vh 30vh 10vh 30vh 10vh 30vh 10vh 30vh 18vh;
             .link {
                 a {
@@ -230,5 +246,4 @@
             }
         }
     }   
-
 }

@@ -13,6 +13,7 @@ function Summary() {
     return (
         <div className={styles.summary}>
             <div className={styles.backgroundVege}></div>
+            <h2>SOMMAIRE</h2>
             <div className={styles.summaryList}>
                 <Link href="#services">
                     <div className={`${styles.link} ${styles.one}`}>
