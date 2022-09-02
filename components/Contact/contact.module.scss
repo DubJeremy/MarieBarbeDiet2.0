@@ -1,76 +1,225 @@
 @import "styles/variables.scss";
 
 .contact {
-    padding-bottom: 15vh;
-    @include flex;
     position: relative;
-
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 20vh 25vh 20vh;
     h2 {
-        font-family: "Ranade-M";
+        grid-column: 2/3;
+        grid-row: 1/2;
+        font-family: "Ranade-B";
         font-size: 1.2em;
-        padding-bottom: 8vh;
-    }
-    .card {
-        border: 1px solid black;
         @include flex;
-        position: relative;
-        width: 70%;
-        padding: 40px;
-        background-color: rgb(205, 186, 205);
-        color: $blue;
-        .border {
-            position: absolute;
-            z-index: -1;
-            top: -20px;
-            left: 5%;
+    }
+    .contactLink {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        width: 100%;
+        font-family: "Ranade-M";
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+
+        .mobilePhone {
+            grid-row: 1/2;
             @include flex;
-            width: 90%;
-            height: calc(100% + 40px);
-            border: 1px solid black;
+            .txt {
+                font-size: 1em;
+            }
         }
-        .lightReflection {
-            width: 10%;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: transparent;
+        .mail {
+            grid-row: 2/3;
+            @include flex;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+        .icon {
+            text-decoration: none;
+            font-size: 3em;
+            padding-bottom: 10px;
+            color: $darkgreen;
+        }
+        .txt {
+            font-size: 1em;
+        }
+    }
+    .borderFooter {
+        grid-column: 1/4;
+        grid-row: 3/4;
+        width: 100%;
+        @include flex($just: flex-end);
+        height: auto;
+        bottom: -3px;
+        background-color: transparent;
+    }
+}
+
+@media screen and (max-width: $extra-small) {
+    .contact {
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 30vh 35vh 20vh;
+    }
+}
+@media screen and (max-width: $extra-small) and (min-height: $small) {
+    .contact {
+        grid-template-rows: 20vh 30vh 20vh;
+        .contactLink {
+            .txt {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+@media screen and (min-width: $medium) {
+    .contact {
+        grid-template-rows: 25vh 30vh 20vh;
+        h2 {
+            font-size: 1.5em;
         }
         .contactLink {
-            width: 100%;
-            font-family: "Ranade-B";
-            font-size: 1.5em;
-            @include flex;
-
             .mobilePhone {
-                @include flex($dir: row);
-                margin-bottom: 20px;
+                .txt {
+                    font-size: 2em;
+                }
+            }
+            .icon {
+                font-size: 4em;
+                padding-bottom: 20px;
+            }
+            .txt {
+                font-size: 2em;
+            }
+        }
+    }
+}
+@media screen and (min-width: $large) {
+    .contact {
+        grid-template-rows: 30vh 20vh 25vh;
+        h2 {
+            font-size: 1.5em;
+        }
+        .contactLink {
+            .mobilePhone {
+                .txt {
+                    font-size: 2em;
+                }
+            }
+            .icon {
+                font-size: 4em;
+                padding-bottom: 20px;
+            }
+            .txt {
+                font-size: 2em;
+            }
+        }
+    }
+}
+// Landscape -----------------------------
+@media screen and (max-width: $small) and (orientation: landscape) {
+    .contact {
+        grid-template-rows: 40vh 50vh 40vh;
+        .contactLink {
+            .mobilePhone {
                 .txt {
                     font-size: 1.5em;
                 }
             }
-            .mail {
-                @include flex($dir: row);
-                margin-bottom: 20px;
-                a {
-                    text-decoration: none;
-                    color: $blue;
+            .icon {
+                font-size: 2em;
+                padding-bottom: 10px;
+            }
+            .txt {
+                font-size: 1em;
+            }
+        }
+    }
+}
+@media screen and (min-width: $small) and (orientation: landscape) {
+    .contact {
+        grid-template-rows: 40vh 55vh 40vh;
+        .contactLink {
+            .mobilePhone {
+                .txt {
+                    font-size: 1.5em;
                 }
             }
             .icon {
                 font-size: 3em;
+                padding-bottom: 10px;
             }
             .txt {
-                font-size: 1.5em;
-                padding-left: 30px;
+                font-size: 1em;
             }
         }
     }
-    .borderFooter {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        bottom: -3px;
-        padding: 0;
-        background-color: transparent;
+}
+@media screen and (min-width: $small) and (max-height: $extra-small) and (orientation: landscape) {
+    .contact {
+        grid-template-rows: 50vh 60vh 40vh;
+        .contactLink {
+            .mobilePhone {
+                .txt {
+                    font-size: 1.5em;
+                }
+            }
+            .icon {
+                font-size: 2em;
+                padding-bottom: 10px;
+            }
+            .txt {
+                font-size: 1em;
+            }
+        }
+    }
+}
+@media screen and (min-width: $small) and (min-height: $small) and (orientation: landscape) {
+    .contact {
+        grid-template-rows: 30vh 40vh 30vh;
+        .contactLink {
+            .mobilePhone {
+                .txt {
+                    font-size: 1.5em;
+                }
+            }
+            .icon {
+                font-size: 3em;
+                padding-bottom: 10px;
+            }
+            .txt {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+@media screen and (min-width: $large) and (orientation: landscape) {
+    .contact {
+        grid-template-rows: 30vh 45vh 25vh;
+        .contactLink {
+            .mobilePhone {
+                .txt {
+                    font-size: 2em;
+                }
+            }
+            .icon {
+                font-size: 4.5em;
+                padding-bottom: 20px;
+            }
+            .txt {
+                font-size: 2em;
+            }
+        }
+    }
+}
+@media screen and (min-width: $extra-large) and (orientation: landscape) {
+    .contact {
+        grid-template-rows: 30vh 40vh 30vh;
+    }
+}
+@media screen and (min-width: $extra-large) and (min-height: $large) and (orientation: landscape) {
+    .contact {
+        grid-template-rows: 30vh 30vh 30vh;
     }
 }

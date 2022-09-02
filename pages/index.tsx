@@ -32,7 +32,7 @@ const Home: NextPage = () => {
                     <Services />
                     <Program />
                     <Faq />
-                    {/* <Contact /> */}
+                    <Contact />
                     {/* <Footer /> */}
                 </div>
             </div>

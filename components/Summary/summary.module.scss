@@ -188,6 +188,21 @@
         }
     }   
 }
+@media screen and (min-width: $large) and (min-height: $extra-large) {
+    .summary {
+        h2 {
+            height: 20vh;
+        }
+        .summaryList {
+            grid-template-rows: 5vh 15vh 8vh 15vh 8vh 15vh 8vh 15vh 5vh;
+            .link {
+                a {
+                    font-size: 6.5em;
+                }
+            }
+        }
+    }   
+}
 // Landscape ------------------------------
 @media screen and (max-width: $extra-large) and (orientation: landscape) and (min-width: $small) {
     .summary {
