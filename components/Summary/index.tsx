@@ -11,7 +11,7 @@ import styles from "./summary.module.scss";
 
 function Summary() {
     return (
-        <div className={styles.summary}>
+        <div id="summary" className={styles.summary}>
             <div className={styles.backgroundVege}></div>
             <h2>SOMMAIRE</h2>
             <div className={styles.summaryList}>

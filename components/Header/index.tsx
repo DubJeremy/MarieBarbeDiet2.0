@@ -7,6 +7,7 @@ import PhotoMB from "../svgs/fdp.svg";
 
 import styles from "./header.module.scss";
 import { useState } from "react";
+import Link from "next/link";
 
 function Header() {
     const [revealPresentation, setRevealPresentation] = useState(false);
@@ -56,9 +57,11 @@ function Header() {
                         programme et un suivi personnalisé. Mon but : Vous
                         permettre d’améliorer votre santé.
                     </p>
-                    <div className={styles.plus} onClick={() => reveal()}>
-                        +
-                    </div>
+                    <Link href="#summary">
+                        <div className={styles.plus} onClick={() => reveal()}>
+                            +
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
