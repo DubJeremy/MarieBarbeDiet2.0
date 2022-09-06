@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Flip } from "./motionHeader";
 import BackgroundVege from "../svgs/vegetables.svg";
 import LogoMBD from "../svgs/MarieBarbé.svg";
-import PhotoMB from "../svgs/fdp.svg";
+import PhotoMB from "../svgs/fdp1.svg";
 
 import styles from "./header.module.scss";
 import { useState } from "react";

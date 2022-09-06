@@ -33,7 +33,7 @@ const Home: NextPage = () => {
                     <Program />
                     <Faq />
                     <Contact />
-                    {/* <Footer /> */}
+                    <Footer />
                 </div>
             </div>
         </div>

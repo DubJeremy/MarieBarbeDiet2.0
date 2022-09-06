@@ -32,6 +32,12 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            svg {
+                background-color: $yellowlight;
+                background: hsla(52, 43%, 55%, 1);
+                background: linear-gradient(315deg, $yellow 19%, $greentea 77%);
+                // border: 1px solid black;
+            }
         }
         .intro {
             width: 100%;

@@ -1,48 +1,394 @@
 @import "styles/variables.scss";
 
 .footer {
-    @include flex($just: space-between);
-    height: 22vh;
+    height: 25vh;
     background-color: $darkbackground;
-    padding: 35px;
     font-family: "Ranade-M";
-    font-size: 1.2em;
-    color: $greentea;
+    font-size: 0.6em;
+    color: white;
     position: relative;
-    .network{
-        padding-top: 40px;
-        width: 35%;
-        @include flex($just: space-between, $dir: row);
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 50% 5% 35% 5%;
+
+    .network {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: 22.5% 15% 5% 15% 5% 15% 22.5%;
+        grid-template-rows: 1fr;
         .facebook {
-            width: 30px;
+            grid-column: 2/3;
             cursor: pointer;
+            @include flex;
+            svg {
+                width: 15px;
+            }
         }
         .instagram {
-            padding-top: 5px ;
-            width: 55px;
+            grid-column: 4/5;
+            padding-top: 5px;
             cursor: pointer;
+            @include flex;
+            svg {
+                width: 27px;
+            }
         }
         .linkedin {
-            
-            width: 55px;
+            grid-column: 6/7;
             cursor: pointer;
+            @include flex;
+            svg {
+                width: 27px;
+            }
         }
     }
     .txt {
+        grid-column: 2/3;
+        grid-row: 4/5;
         width: 100%;
-        @include flex($align: flex-end,$just: space-between, $dir: row);
-        >div:first-child {
-            width: 45%;
+        display: grid;
+        grid-template-columns: 45% 10% 45%;
+        grid-template-rows: 1fr;
+        > div:first-child {
+            grid-column: 1/2;
+            @include flex($just: flex-start, $wrap: nowrap, $align: flex-start);
+            h3 {
+                padding-bottom: 10px;
+            }
         }
-        >div:last-child {
-            @include flex($dir: row);
+        > div:last-child {
+            grid-column: 3/4;
+            @include flex(
+                $just: flex-end,
+                $dir: row,
+                $wrap: nowrap,
+                $align: flex-start
+            );
             p {
-
+                text-align: end;
             }
             .dubLinkedIn {
                 width: 25px;
-                margin-left: 5px;
+                margin-left: 10px;
                 cursor: pointer;
+            }
+        }
+    }
+}
+@media screen and (max-width: $extra-small) and (orientation: portrait) {
+    .footer {
+        height: 40vh;
+    }
+}
+@media screen and (min-width: $small) and (orientation: portrait) {
+    .footer {
+        height: 30vh;
+        font-size: 1em;
+        grid-template-rows: 5% 45% 5% 35% 10%;
+
+        .network {
+            .facebook {
+                svg {
+                    width: 20px;
+                }
+            }
+            .instagram {
+                padding-top: 10px;
+                svg {
+                    width: 35px;
+                }
+            }
+            .linkedin {
+                svg {
+                    width: 35px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $medium) and (orientation: portrait) {
+    .footer {
+        height: 27vh;
+        font-size: 1.2em;
+
+        .network {
+            .facebook {
+                svg {
+                    width: 25px;
+                }
+            }
+            .instagram {
+                svg {
+                    width: 45px;
+                }
+            }
+            .linkedin {
+                svg {
+                    width: 45px;
+                }
+            }
+        }
+        .txt {
+            > div:first-child {
+                h3 {
+                    padding-top: 10px;
+                    padding-bottom: 20px;
+                }
+            }
+            > div:last-child {
+                p {
+                    padding-top: 10px;
+                }
+                .dubLinkedIn {
+                    width: 45px;
+                    margin-left: 10px;
+                    padding-top: 0px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $large) and (orientation: portrait) {
+    .footer {
+        height: 25vh;
+        font-size: 1.2em;
+
+        .network {
+            grid-template-columns: 30% 10% 5% 10% 5% 10% 30%;
+        }
+    }
+}
+// Landscape -----------------------------
+@media screen and (max-width: $small) and (orientation: landscape) {
+    .footer {
+        height: 45vh;
+        .txt {
+            > div:first-child {
+                h3 {
+                    padding-bottom: 5px;
+                    padding-top: 7px;
+                }
+            }
+            > div:last-child {
+                p {
+                    padding-top: 7px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $small) and (orientation: landscape) {
+    .footer {
+        height: 45vh;
+        font-size: 0.7em;
+        grid-template-rows: 5% 40% 5% 45% 5%;
+        .txt {
+            > div:first-child {
+                h3 {
+                    padding-bottom: 5px;
+                    padding-top: 7px;
+                }
+            }
+            > div:last-child {
+                p {
+                    padding-top: 7px;
+                }
+            }
+        }
+        .network {
+            grid-template-columns: 30% 10% 5% 10% 5% 10% 30%;
+        }
+    }
+}
+@media screen and (min-width: $small) and (min-height: $small) and (orientation: landscape) {
+    .footer {
+        height: 35vh;
+        font-size: 0.9em;
+        .txt {
+            > div:first-child {
+                h3 {
+                    padding-bottom: 10px;
+                    padding-top: 5px;
+                }
+            }
+            > div:last-child {
+                p {
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $medium) and (orientation: landscape) {
+    .footer {
+        font-size: 0.8em;
+        grid-template-rows: 5% 50% 5% 35% 5%;
+        .network {
+            grid-template-columns: 30% 10% 5% 10% 5% 10% 30%;
+            .facebook {
+                svg {
+                    width: 15px;
+                }
+            }
+            .instagram {
+                svg {
+                    width: 27px;
+                }
+            }
+            .linkedin {
+                svg {
+                    width: 27px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $large) and (orientation: landscape) {
+    .footer {
+        font-size: 1em;
+        .network {
+            .facebook {
+                svg {
+                    width: 20px;
+                }
+            }
+            .instagram {
+                svg {
+                    width: 37px;
+                }
+            }
+            .linkedin {
+                svg {
+                    width: 37px;
+                }
+            }
+        }
+        .txt {
+            > div:first-child {
+                h3 {
+                    padding-bottom: 10px;
+                    padding-top: 3px;
+                }
+            }
+            > div:last-child {
+                p {
+                    padding-top: 3px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $extra-large) {
+    .footer {
+        font-size: 1.2em;
+        .network {
+            .facebook {
+                svg {
+                    width: 35px;
+                }
+            }
+            .instagram {
+                svg {
+                    width: 60px;
+                }
+            }
+            .linkedin {
+                svg {
+                    width: 60px;
+                }
+            }
+        }
+        .txt {
+            > div:first-child {
+                width: 80%;
+                h3 {
+                    padding-bottom: 15px;
+                    padding-top: 2px;
+                }
+            }
+            > div:last-child {
+                p {
+                    padding-top: 2px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-height: $large) {
+    .footer {
+        height: 25vh;
+        font-size: 1em;
+        .network {
+            grid-template-columns: 30% 10% 5% 10% 5% 10% 30%;
+            .facebook {
+                svg {
+                    width: 20px;
+                }
+            }
+            .instagram {
+                svg {
+                    width: 40px;
+                }
+            }
+            .linkedin {
+                svg {
+                    width: 40px;
+                }
+            }
+        }
+        .txt {
+            > div:first-child {
+                width: 80%;
+                h3 {
+                    padding-bottom: 15px;
+                    padding-top: 2px;
+                }
+            }
+            > div:last-child {
+                p {
+                    padding-top: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $ultra-large) {
+    .footer {
+        height: 35vh;
+        font-size: 1em;
+        .network {
+            grid-template-columns: 37.5% 5% 5% 5% 5% 5% 37.5%;
+            .facebook {
+                svg {
+                    width: 20px;
+                }
+            }
+            .instagram {
+                svg {
+                    width: 40px;
+                }
+            }
+            .linkedin {
+                svg {
+                    width: 40px;
+                }
+            }
+        }
+        .txt {
+            > div:first-child {
+                width: 80%;
+                h3 {
+                    padding-bottom: 15px;
+                    padding-top: 2px;
+                }
+            }
+            > div:last-child {
+                p {
+                    padding-top: 2px;
+                }
             }
         }
     }
