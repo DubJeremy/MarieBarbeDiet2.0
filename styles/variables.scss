@@ -1,25 +1,24 @@
-$greentea: #E8EFE9;
+$greentea: #e8efe9;
 $green: #527649;
-$orange: #EF8354;
-$purple: #9C7A97;
+$orange: #ef8354;
+$purple: #9c7a97;
 
 $darkbackground: #b3b3b5;
-$yellow: #FFD782;
+$yellow: #ffd782;
 $yellowlight: #fee5ae;
 
-$background: #E8EFE9;
-$cream: #FCF3F3;
+$background: #e8efe9;
+$cream: #fcf3f3;
 $brown: rgb(175, 122, 105);
 $darkgreen: #143642ff;
 
 // Mixin -----------------------
-@mixin flex ($just: center, $align: center, $dir:column, $wrap: wrap)  
-{
+@mixin flex($just: center, $align: center, $dir: column, $wrap: wrap) {
     display: flex;
     justify-content: $just;
     align-items: $align;
     flex-direction: $dir;
-    flex-wrap: $wrap;    
+    flex-wrap: $wrap;
 }
 
 // Media queries breakpoints ----

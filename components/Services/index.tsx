@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { wrap } from "popmotion";
 
 import Carousel from "./Carousel";
@@ -13,7 +14,10 @@ function Services() {
     const [selectedService, setSelectedService] = useState(services[0]);
     const [[page, direction], setPage] = useState([0, 0]);
     const serviceIndex = wrap(0, services.length, page);
-    const [targetReached] = useMediaQuery(`(min-width: 1280px)`);
+    const [targetXS] = useMediaQuery(`(max-width: 320px)`);
+    const [targetS] = useMediaQuery(`(min-width: 320px)`);
+    const [targetM] = useMediaQuery(`(min-width: 768px)`);
+    const [targetL] = useMediaQuery(`(min-width: 1280px)`);
 
     const paginate = (newDirection: number) => {
         setPage([page + newDirection, newDirection]);
@@ -25,11 +29,10 @@ function Services() {
         }, 200);
         return () => clearTimeout(loading);
     }, [serviceIndex]);
-
     return (
         <div id="services" className={styles.services}>
             <h2>SERVICES</h2>
-            {!targetReached ? (
+            {!targetL ? (
                 <>
                     <AnimatePresence exitBeforeEnter>
                         <motion.div
@@ -47,7 +50,25 @@ function Services() {
                                 className={styles.illustration}
                                 variants={Img}
                             >
-                                {selectedService ? selectedService.img : ""}
+                                <>
+                                    {selectedService ? (
+                                        <Image
+                                            src={
+                                                targetXS
+                                                    ? selectedService.imgXS
+                                                    : targetS
+                                                    ? selectedService.imgS
+                                                    : targetM
+                                                    ? selectedService.imgM
+                                                    : selectedService.imgL
+                                            }
+                                            alt={selectedService.alt}
+                                            layout="responsive"
+                                            objectFit="cover"
+                                            className={styles.image}
+                                        />
+                                    ) : null}
+                                </>
                             </motion.div>
                         </motion.div>
                     </AnimatePresence>
@@ -92,7 +113,7 @@ function Services() {
                                 }
                                 variants={selectedService.left ? Left : Right}
                             >
-                                {selectedService ? selectedService.desc : ""}
+                                {selectedService.desc}
                             </motion.p>
                             <motion.div
                                 className={`${
@@ -102,7 +123,12 @@ function Services() {
                                 } ${styles.illustration}`}
                                 variants={selectedService.left ? Right : Left}
                             >
-                                {selectedService ? selectedService.img : ""}
+                                <Image
+                                    src={selectedService.imgM}
+                                    alt={selectedService.alt}
+                                    objectFit="cover"
+                                    className={styles.image}
+                                />
                             </motion.div>
                         </motion.div>
                     </AnimatePresence>

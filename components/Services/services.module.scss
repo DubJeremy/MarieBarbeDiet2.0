@@ -32,10 +32,9 @@
         .illustration {
             width: 170px;
             height: 170px;
-            border-radius: 50%;
             overflow: hidden;
-            svg {
-                height: 100%;
+            .image {
+                border-radius: 10%;
             }
         }
     }
@@ -48,9 +47,6 @@
 
 @media screen and (max-width: $extra-small) {
     .services {
-        h2 {
-            // margin: 10vh 0;
-        }
         .containerMobile {
             .desc {
                 font-size: 1.5em;
@@ -65,7 +61,6 @@
 @media screen and (min-width: $medium) {
     .services {
         h2 {
-            // margin: 5vh 0;
             font-size: 1.5em;
         }
         .containerMobile {
@@ -102,7 +97,7 @@
 }
 @media screen and (min-width: $small) and (max-height: $extra-small) and (orientation: landscape) {
     .services {
-        grid-template-rows:30vh 80vh 50vh;
+        grid-template-rows: 30vh 80vh 50vh;
         .containerMobile {
             .desc {
                 font-size: 1.5em;
@@ -194,9 +189,10 @@
                 position: absolute;
                 @include flex;
                 width: 18vw;
-                height: 100%;
-                top: 0;
-                svg {
+                height: 50%;
+                top: 25%;
+                border-radius: 20px;
+                .image {
                     border-radius: 20px;
                 }
             }

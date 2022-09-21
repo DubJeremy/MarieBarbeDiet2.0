@@ -1,13 +1,16 @@
 import { AnimatePresence, motion } from "framer-motion";
 
-import { Flip } from "./motionHeader";
-import BackgroundVege from "../svgs/vegetables.svg";
-import LogoMBD from "../svgs/MarieBarbé.svg";
-import PhotoMB from "../svgs/fdp1.svg";
+// import { Flip } from "./motionHeader";
+// import BackgroundVege from "../svgs/vegetables.svg";
+// import LogoMBD from "../svgs/MarieBarbé.svg";
+// import PhotoMB from "../svgs/fdp1.svg";
+import PhotoMB from "../../public/images/fdp.jpeg";
+import LogoMB from "../../public/images/logo.png";
 
 import styles from "./header.module.scss";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 function Header() {
     const [revealPresentation, setRevealPresentation] = useState(false);
@@ -21,7 +24,13 @@ function Header() {
         <div className={styles.header}>
             <div className={styles.logoTitle}>
                 <div className={styles.logo}>
-                    <LogoMBD />
+                    {/* <LogoMBD /> */}
+                    <Image 
+                        src={LogoMB}
+                        alt="Logo de Marie Barbé"
+                        layout="responsive"
+                        objectFit="contain"
+                    />
                 </div>
                 <h1>
                     <p>Diététicienne,</p>
@@ -39,15 +48,23 @@ function Header() {
                         // animate={{rotateY: revealPresentation ? 180 : 0}}
                         // exit="exit"
                     >
-                        <div className={styles.reveal}>
+                        <div className={styles.img}>
+                            <Image
+                                src={PhotoMB}
+                                alt="Photo de Marie Barbé"
+                                layout="responsive"
+                                objectFit="contain"
+                            />
+                        </div>
+                        {/* <div className={styles.reveal}>
                             <PhotoMB />
                         </div>
-                        {/* <p className={styles.reveal}>
+                         <p className={styles.reveal}> 
                             Forte d&apos;une expérience d&apos;infirmière
                             diplômée d&apos;état, auprès de différents publics,
                             j&apos;ai effectué une reconversion professionnelle
                             dans le domaine de la nutrition.
-                        </p> */}
+                        </p>  */}
                     </motion.div>
                 </AnimatePresence>
                 <div className={styles.intro}>

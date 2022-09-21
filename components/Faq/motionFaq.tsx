@@ -9,7 +9,7 @@ export const AnswerAnim = {
         width: "45%"
     },
     start: {
-        height: "55%",
+        height: "60%",
         width: "75%",
         transition: {
             delay: 0.5,
