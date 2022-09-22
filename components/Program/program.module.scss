@@ -18,14 +18,14 @@
         grid-column: 2/3;
         grid-row: 2/3;
         > .left {
-            background: url(../../public/images/coffeSnack.svg);
+            background: url(../../public/images/xs/coffeSnackXS.png);
         }
     }
     .second {
         grid-column: 2/3;
         grid-row: 4/5;
         > .right {
-            background: url(../../public/images/plate1.jpg);
+            background: url(../../public/images/xs/plateXS.png);
         }
     }
     .appointment {
@@ -162,11 +162,21 @@
         }
     }
 }
-@media screen and  (min-width: $medium) {
+@media screen and (min-width: $medium) {
     .program {
         grid-template-columns: 10% 80% 10%;
         h2 {
             font-size: 1.5em;
+        }
+        .first {
+            > .left {
+                background: url(../../public/images/s/coffeSnackS.png);
+            }
+        }
+        .second {
+            > .right {
+                background: url(../../public/images/s/plateS.png);
+            }
         }
         .appointment {
             grid-template-columns: 45% 10% 45%;
@@ -174,6 +184,10 @@
                 font-size: 3.2em;
             }
             .container {
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
                 .txt {
                     h4 {
                         font-size: 1.7em;
@@ -191,11 +205,25 @@
 @media screen and (min-width: $large) {
     .program {
         grid-template-columns: 10% 80% 10%;
+        .first {
+            > .left {
+                background: url(../../public/images/m/coffeSnackM.png);
+            }
+        }
+        .second {
+            > .right {
+                background: url(../../public/images/m/plateM.png);
+            }
+        }
         .appointment {
             h3 {
                 font-size: 3.6em;
             }
             .container {
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
                 .txt {
                     h4 {
                         font-size: 2em;
@@ -214,7 +242,7 @@
     .program {
         grid-template-rows: 50vh 150vh 10vh 150vh 10vh;
         grid-template-columns: 12% 76% 12%;
-        
+
         .appointment {
             grid-template-columns: 45% 10% 45%;
             h3 {
@@ -307,11 +335,25 @@
 }
 @media screen and (orientation: landscape) and (min-width: $ultra-large) {
     .program {
+        .first {
+            > .left {
+                background: url(../../public/images/l/coffeSnackL.png);
+            }
+        }
+        .second {
+            > .right {
+                background: url(../../public/images/l/plateL.png);
+            }
+        }
         .appointment {
             h3 {
                 font-size: 5em;
             }
             .container {
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
                 width: 70%;
                 margin-left: 15%;
                 grid-template-rows: 2.5% 95% 2.5%;

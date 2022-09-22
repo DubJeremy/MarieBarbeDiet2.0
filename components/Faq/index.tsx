@@ -76,17 +76,14 @@ function Faq() {
                     <h2>FOIRE AUX QUESTIONS</h2>
                     <div className={styles.container}>
                         {questions.map((question) => (
-                            <>
-                                <div
-                                    key={question.question}
-                                    className={styles.question}
-                                >
+                            <React.Fragment key={question.question}>
+                                <div className={styles.question}>
                                     {question.question}
                                 </div>
                                 <div className={styles.answer}>
                                     {question.answer}
                                 </div>
-                            </>
+                            </React.Fragment>
                         ))}
                     </div>
                 </div>

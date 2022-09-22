@@ -50,39 +50,39 @@ export const Desc = {
 
 export const Right = {
     init: {
-        x: 500,
+        x: 1000,
     },
     start: {
         x: 0,
         transition: {
             ease: "easeOut",
-            duration: 0.7,
+            duration: 1,
         },
     },
     exit: {
-        x: 500,
+        x: 1000,
         transition: {
             ease: "linear",
-            duration: 0.15,
+            duration: 0.2,
         },
     },
 };
 export const Left = {
     init: {
-        x: -500,
+        x: -1000,
     },
     start: {
         x: 0,
         transition: {
             ease: "easeOut",
-            duration: 0.7,
+            duration: 1,
         },
     },
     exit: {
-        x: -500,
+        x: -1000,
         transition: {
             ease: "linear",
-            duration: 0.15,
+            duration: 0.2,
         },
     },
 };

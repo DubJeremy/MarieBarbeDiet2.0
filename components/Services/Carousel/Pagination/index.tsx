@@ -1,17 +1,21 @@
-import { AnimateSharedLayout } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 import { AllServices } from "../../AllServices";
 import Dot from "./dot";
 
 type Props = {
-    currentPage: number
-    paginate: any
-    idService: number
-}
+    currentPage: number;
+    paginate: any;
+    idService: number;
+};
 
-export default function Pagination({ currentPage, paginate, idService }: Props) {
+export default function Pagination({
+    currentPage,
+    paginate,
+    idService,
+}: Props) {
     return (
-        <AnimateSharedLayout>
+        <AnimatePresence>
             {AllServices.map((service, id) => (
                 <Dot
                     key={id}
@@ -19,6 +23,6 @@ export default function Pagination({ currentPage, paginate, idService }: Props) 
                     isSelected={service.id === idService}
                 />
             ))}
-        </AnimateSharedLayout>
+        </AnimatePresence>
     );
 }
