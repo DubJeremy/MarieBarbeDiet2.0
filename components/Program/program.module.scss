@@ -87,7 +87,7 @@
                 display: grid;
                 grid-template-columns: 5% 90% 5%;
                 grid-template-rows: 2% 20% 76% 2%;
-                h4 {
+                .time {
                     width: 100%;
                     grid-column: 2/3;
                     grid-row: 2/3;
@@ -149,7 +149,7 @@
                 .txt {
                     grid-template-columns: 7% 86% 7%;
                     grid-template-rows: 2% 20% 76% 2%;
-                    h4 {
+                    .time {
                         font-size: 1.1em;
                     }
                     .center {
@@ -189,7 +189,7 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 .txt {
-                    h4 {
+                    .time {
                         font-size: 1.7em;
                     }
                     .center {
@@ -225,7 +225,7 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 .txt {
-                    h4 {
+                    .time {
                         font-size: 2em;
                     }
                     .center {
@@ -295,7 +295,7 @@
             .container {
                 grid-template-rows: 3% 94% 3%;
                 .txt {
-                    h4 {
+                    .time {
                         font-size: 1.8em;
                     }
                     .center {
@@ -320,7 +320,7 @@
             .container {
                 grid-template-rows: 2.5% 95% 2.5%;
                 .txt {
-                    h4 {
+                    .time {
                         font-size: 1.5em;
                     }
                     .center {
@@ -358,7 +358,7 @@
                 margin-left: 15%;
                 grid-template-rows: 2.5% 95% 2.5%;
                 .txt {
-                    h4 {
+                    .time {
                         font-size: 1.5em;
                     }
                     .center {

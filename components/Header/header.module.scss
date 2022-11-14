@@ -132,7 +132,7 @@
     }
 }
 
-@media screen and (min-width: $large) {
+@media screen and (min-width: $large) and (orientation: portrait) {
     .header {
         .logoTitle {
             padding-top: 50px;
@@ -168,92 +168,248 @@
         }
     }
 }
-@media screen and (max-width: $extra-large) and (orientation: landscape) and (min-width: $small) {
+// Landscape ------------------------------
+@media screen and (min-width: $large) and (orientation: landscape) {
     .header {
+        display: grid;
+        grid-template-columns: 3% 94% 3%;
+        grid-template-rows: 5% 17% 13% 65%;
         .logoTitle {
-            padding-top: 35px;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            padding-top: 0px;
+            display: grid;
+            grid-template-columns: 10% 1% 19% 55% 15%;
+            grid-template-rows: 50% 50%;
+            position: relative;
 
             .logo {
-                width: 20%;
+                width: 80%;
+                height: auto;
+                grid-column: 1/2;
+                grid-row: 1/3;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
             }
             h1 {
-                font-size: 2.5em;
+                grid-column: 3/4;
+                grid-row: 2/3;
+                font-size: 1.3em;
+                text-align: left;
+            }
+            .network {
+                grid-column: 5/6;
+                grid-row: 1/3;
+                width: 100%;
+                height: 100%;
+                @include flex(
+                    $dir: row,
+                    $wrap: nowrap,
+                    $just: space-between,
+                    $align: flex-end
+                );
+                opacity: 0.7;
+
+                .facebook {
+                    width: 25%;
+                    height: 100%;
+                    @include flex($align: flex-end, $just: flex-end);
+                    padding-bottom: 3px;
+                    cursor: pointer;
+                    svg {
+                        width: 100%;
+                        max-height: 20%;
+                    }
+                }
+                .instagram {
+                    width: 25%;
+                    margin-top: 5px;
+                    cursor: pointer;
+                    svg {
+                        width: 60%;
+                        height: 100%;
+                    }
+                }
+                .linkedin {
+                    width: 25%;
+                    cursor: pointer;
+                    svg {
+                        width: 60%;
+                        height: 100%;
+                    }
+                }
             }
         }
         .content {
-            margin-top: calc(35px + 2vh);
-            padding: 0 50px;
-
+            padding: 0;
+            margin: 0;
+            grid-column: 2/3;
+            grid-row: 4/5;
+            display: grid;
+            grid-template-columns: 13% 32% 10% 35% 15%;
+            grid-template-rows: 1fr;
             .photoMB {
-                width: 30%;
-                padding: 10px;
+                grid-column: 2/3;
+                width: calc(100% - 40px);
+                height: auto;
+                .img {
+                    width: auto;
+                    height: 100%;
+                }
             }
             .intro {
-                width: 50%;
+                @include flex;
+                width: 100%;
+                grid-column: 4/5;
 
                 h2 {
-                    font-size: 2em;
+                    font-size: 2.6em;
                     margin-bottom: 10px;
                 }
                 p {
-                    font-size: 1.2em;
-                    line-height: 1.1em;
+                    margin-bottom: 25px;
+                    font-size: 1.3em;
+                    width: 75%;
                     margin-bottom: 15px;
                 }
                 .plus {
-                    width: 30px;
-                    height: 30px;
+                    width: 25px;
+                    height: 25px;
+                    font-size: 1.4em;
                 }
             }
         }
     }
 }
-@media screen and (min-width: $extra-large) {
+@media screen and (min-width: $extra-large) and (orientation: landscape) {
     .header {
-        display: grid;
-        grid-template-columns: 15% 70% 15%;
-        grid-template-rows: 1fr;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 5% 17% 15% 67%;
         .logoTitle {
-            grid-column: 2/3;
-            padding-top: calc(50px + 5vh);
-
-            .logo {
-                width: 15%;
+            h1 {
+                margin-bottom: -15px;
             }
         }
         .content {
-            grid-column: 2/3;
-            margin-top: calc(50px + 5vh);
-            padding: 0;
-            @include flex($just: space-between, $dir: row);
-
-            .photoMB {
-                width: 40%;
-                padding: 20px;
-            }
             .intro {
-                width: 45%;
-
                 h2 {
-                    font-size: 3em;
-                    margin-bottom: calc(10px + 2vh);
+                    font-size: 3.2em;
                 }
                 p {
-                    width: 80%;
                     font-size: 1.5em;
-                    line-height: 1.1em;
-                    margin-bottom: 25px;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $ultra-large) and (orientation: landscape) {
+    .header {
+        grid-template-columns: 1% 98% 1%;
+        grid-template-rows: 6% 14% 10% 70%;
+        height: 100vh;
+        .logoTitle {
+            margin: 0 auto;
+            width: 80%;
+            grid-template-columns: 9% 1% 17% 58% 15%;
+            grid-template-rows: 50% 50%;
+            h1 {
+                margin-bottom: -15px;
+            }
+            .network {
+                width: 80%;
+                margin-left: 15%;
+                .facebook {
+                    width: 18%;
+                    padding-bottom: 3px;
+                    svg {
+                        max-height: 18%;
+                    }
+                }
+                .instagram {
+                    width: 20%;
+                    margin-top: 7px;
+                    svg {
+                        width: 60%;
+                        height: 100%;
+                    }
+                }
+                .linkedin {
+                    width: 20%;
+                    svg {
+                        width: 60%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .content {
+            grid-template-columns: 25% 18% 10% 20% 25%;
+            .photoMB {
+                background: #f2f2f0;
+            }
+            .intro {
+                h2 {
+                    font-size: 3.2em;
+                }
+                p {
+                    font-size: 1.5em;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $ultra-large) and (min-height: $extra-large) and (orientation: landscape) {
+    .header {
+        .logoTitle {
+            width: 85%;
+            grid-template-columns: 10% 1% 16% 58% 15%;
+            h1 {
+                margin-bottom: -45px;
+                font-size: 1.9em;
+            }
+            .network {
+                .facebook {
+                    svg {
+                        max-height: 18%;
+                    }
+                }
+                .instagram {
+                    svg {
+                        width: 80%;
+                    }
+                }
+                .linkedin {
+                    svg {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+        .content {
+            grid-template-columns: 24% 22% 8% 24% 22%;
+            .intro {
+                h2 {
+                    font-size: 4.5em;
+                    margin-bottom: 30px;
+                }
+                p {
+                    font-size: 2em;
+                    width: 80%;
+                    margin-bottom: 30px;
                 }
                 .plus {
                     width: 40px;
                     height: 40px;
+                    font-size: 2.7em;
                 }
             }
         }
-    }
-}
-@media screen and (min-width: $ultra-large) {
-    .header {
-        grid-template-columns: 15% 70% 15%;
     }
 }

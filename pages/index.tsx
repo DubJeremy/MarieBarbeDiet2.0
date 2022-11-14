@@ -11,6 +11,7 @@ import Summary from "../components/Summary";
 import Services from "../components/Services";
 
 import styles from "./main.module.scss";
+import { useEffect, useRef } from "react";
 
 const Home: NextPage = () => {
     return (

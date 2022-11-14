@@ -12,7 +12,7 @@ function Program() {
                 <div className={`${styles.container} ${styles.left}`}>
                     <div className={styles.glassEffect}></div>
                     <div className={styles.txt}>
-                        <h4>Compter environ 1 heure</h4>
+                        <p className={styles.time}>Compter environ 1 heure</p>
                         <div className={styles.center}>
                             <p>Bilan complet</p>
                             <p>
@@ -38,7 +38,7 @@ function Program() {
                 <div className={`${styles.container} ${styles.right}`}>
                     <div className={styles.glassEffect}></div>
                     <div className={styles.txt}>
-                        <h4>Environ 30 min</h4>
+                        <p className={styles.time}>Environ 30 min</p>
                         <div className={styles.center}>
                             <p>Prise en compte de votre ressenti</p>
                             <p>Mise en évidence de votre évolution</p>

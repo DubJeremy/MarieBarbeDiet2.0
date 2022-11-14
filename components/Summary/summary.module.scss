@@ -175,7 +175,6 @@
         .backgroundVege {
             height: 250px;
             background-image: url(../../public/images/l/cherryL.png);
-
         }
         .summaryList {
             grid-template-rows: 18vh 15vh 8vh 15vh 8vh 15vh 8vh 15vh 18vh;
@@ -205,8 +204,11 @@
 // Landscape ------------------------------
 @media screen and (max-width: $extra-large) and (orientation: landscape) and (min-width: $small) {
     .summary {
-        margin-top: -10vh;
+        margin-top: 10vh;
         overflow: hidden;
+        h2 {
+            height: 35vh;
+        }
         .backgroundVege {
             height: 200px;
         }
@@ -224,10 +226,15 @@
         }
     }
 }
+@media screen and (min-width: $large) and (min-height: $medium) and (orientation: landscape) {
+    .summary {
+        margin-top: 8vh;
+    }
+}
 @media screen and (min-width: $extra-large) {
     .summary {
         .backgroundVege {
-            height: 300px;
+            height: 250px;
         }
         .summaryList {
             grid-template-rows: 18vh 30vh 8vh 30vh 8vh 30vh 8vh 30vh 18vh;

@@ -1,31 +1,36 @@
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
-// import { Flip } from "./motionHeader";
-// import BackgroundVege from "../svgs/vegetables.svg";
-// import LogoMBD from "../svgs/MarieBarbé.svg";
-// import PhotoMB from "../svgs/fdp1.svg";
+import Facebook from "../svgs/facebookBlack.svg";
+import Instagram from "../svgs/instagramBlack.svg";
+import Linkedin from "../svgs/linkedinBlack.svg";
 import PhotoMB from "../../public/images/fdp.jpeg";
 import LogoMB from "../../public/images/logo.png";
 
 import styles from "./header.module.scss";
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import useMediaQuery from "../../tools/useMediaQuery";
 
 function Header() {
-    const [revealPresentation, setRevealPresentation] = useState(false);
-    console.log();
+    const [targetReached] = useMediaQuery(`(min-width: 1024px)`);
+    const [isInLandscape, setIsInLandscape] = useState<boolean | null>(null);
 
-    const reveal = () => {
-        setRevealPresentation(!revealPresentation);
+    const orientationCheck = () => {
+        if (typeof window !== "undefined") {
+            if (window.innerHeight < window.innerWidth) {
+                setIsInLandscape(true);
+            } else {
+                setIsInLandscape(false);
+            }
+        }
     };
 
     return (
         <div className={styles.header}>
             <div className={styles.logoTitle}>
                 <div className={styles.logo}>
-                    {/* <LogoMBD /> */}
-                    <Image 
+                    <Image
                         src={LogoMB}
                         alt="Logo de Marie Barbé"
                         layout="responsive"
@@ -36,37 +41,31 @@ function Header() {
                     <p>Diététicienne,</p>
                     <p>Nutritionniste.</p>
                 </h1>
+                {/* {targetReached && isInLandscape ? ( */}
+                <div className={styles.network}>
+                    <div className={styles.facebook}>
+                        <Facebook />
+                    </div>
+                    <div className={styles.instagram}>
+                        <Instagram />
+                    </div>
+                    <div className={styles.linkedin}>
+                        <Linkedin />
+                    </div>
+                </div>
+                {/* ) : null} */}
             </div>
             <div className={styles.content}>
-                <AnimatePresence custom={revealPresentation}>
-                    <motion.div
-                        className={styles.photoMB}
-                        // custom={revealPresentation}
-                        // variants={Flip}
-                        // initial="init"
-                        // animate="start"
-                        // animate={{rotateY: revealPresentation ? 180 : 0}}
-                        // exit="exit"
-                    >
-                        <div className={styles.img}>
-                            <Image
-                                src={PhotoMB}
-                                alt="Photo de Marie Barbé"
-                                layout="responsive"
-                                objectFit="contain"
-                            />
-                        </div>
-                        {/* <div className={styles.reveal}>
-                            <PhotoMB />
-                        </div>
-                         <p className={styles.reveal}> 
-                            Forte d&apos;une expérience d&apos;infirmière
-                            diplômée d&apos;état, auprès de différents publics,
-                            j&apos;ai effectué une reconversion professionnelle
-                            dans le domaine de la nutrition.
-                        </p>  */}
-                    </motion.div>
-                </AnimatePresence>
+                <div className={styles.photoMB}>
+                    <div className={styles.img}>
+                        <Image
+                            src={PhotoMB}
+                            alt="Photo de Marie Barbé"
+                            layout="responsive"
+                            objectFit="contain"
+                        />
+                    </div>
+                </div>
                 <div className={styles.intro}>
                     <h2>Hey, je suis Marie.</h2>
                     <p>
@@ -75,9 +74,7 @@ function Header() {
                         permettre d’améliorer votre santé.
                     </p>
                     <Link href="#summary">
-                        <div className={styles.plus} onClick={() => reveal()}>
-                            +
-                        </div>
+                        <div className={styles.plus}>+</div>
                     </Link>
                 </div>
             </div>
